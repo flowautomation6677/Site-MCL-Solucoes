@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@import "tailwindcss";
+
+@theme {
+  --color-mcl-blue: #0A1D3A; /* Azul marinho principal */
+  --color-mcl-gold: #A67A5B; /* Dourado/cobre de destaque */
+  --color-mcl-light: #F8F9FA; /* Fundo suave */
+  --color-mcl-dark: #1F2937; /* Cinza escuro para textos */
+  
+  --font-sans: var(--font-inter); /* Utilizaremos Inter para tipografia limpa */
+}
+
+@layer base {
+  body {
+    background-color: var(--color-mcl-light);
+    color: var(--color-mcl-dark);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+

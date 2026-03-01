@@ -1,0 +1,30 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Product {
+  id                 String   @id @default(uuid())
+  name               String   // Ex: Carvalho Hanover
+  slug               String   @unique
+  category           String   // Laminado ou Vinílico
+  tone               String   // Claros, Escuros, Amadeirados Quentes
+  imageUrl           String
+  
+  // Especificações Técnicas e de Venda
+  benefits           String?  // JSON ou String (Ex: "Custo-benefício, Instalação rápida")
+  thickness          String?  // Ex: 7mm
+  resistance         String?  // Ex: AC3 / AC4 / Capa de Uso
+  warranty           String?  // Ex: 10 anos
+  techSpecsMisc      String?  // Outros dados (Homenreria, Panante, etc)
+  
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+}
