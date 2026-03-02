@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     siteName: "MCL Soluções",
     images: [
       {
-        url: "https://mclsolucoes.com.br/og-logo.jpg",
+        url: "https://mclsolucoes.com.br/og-logo-black.jpg",
         width: 800,
         height: 800,
         alt: "MCL Soluções Logo",
