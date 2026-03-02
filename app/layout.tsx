@@ -8,8 +8,30 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "MCL Soluções",
-  description: "Catálogo de pisos laminados e vinílicos",
+  title: "MCL Soluções | Pisos Laminados e Vinílicos",
+  description: "A base perfeita para o seu projeto. Encontre o piso ideal para sua casa ou escritório.",
+  openGraph: {
+    title: "MCL Soluções | Pisos Laminados e Vinílicos",
+    description: "A base perfeita para o seu projeto. Encontre o piso ideal para sua casa ou escritório.",
+    url: "https://mclsolucoes.com.br",
+    siteName: "MCL Soluções",
+    images: [
+      {
+        url: "https://mclsolucoes.com.br/Logo-MCL-negativo-transparente.png",
+        width: 800,
+        height: 600,
+        alt: "MCL Soluções Logo",
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MCL Soluções | Pisos Laminados e Vinílicos",
+    description: "A base perfeita para o seu projeto. Encontre o piso ideal.",
+    images: ["https://mclsolucoes.com.br/hero_home.jpg"],
+  },
 };
 
 export default function RootLayout({
