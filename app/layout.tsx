@@ -17,9 +17,9 @@ export const metadata: Metadata = {
     siteName: "MCL Soluções",
     images: [
       {
-        url: "https://mclsolucoes.com.br/Logo-MCL-negativo-transparente.png",
+        url: "https://mclsolucoes.com.br/og-logo.jpg",
         width: 800,
-        height: 600,
+        height: 800,
         alt: "MCL Soluções Logo",
       },
     ],
