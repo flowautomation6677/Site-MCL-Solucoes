@@ -89,7 +89,7 @@ export function Footer() {
                         </div>
                         <div className="text-gray-300 text-[15px] flex flex-col gap-1">
                             <span className="font-bold text-white">Horário:</span>
-                            <span>Seg-Sex 8h-18h, Sáb 8h-12h</span>
+                            <span>10h às 16h00 de segunda-feira a sexta-feira</span>
                         </div>
                     </div>
 
