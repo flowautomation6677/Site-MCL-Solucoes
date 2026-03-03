@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { WhatsAppLink } from "./WhatsAppLink"
 
 const FacebookIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -46,9 +47,13 @@ export function Footer() {
                             <a href="https://www.instagram.com/mclsolucoes/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-mcl-gold transition-colors">
                                 <InstagramIcon />
                             </a>
-                            <a href="https://wa.me/5521985778195" target="_blank" rel="noopener noreferrer" className="text-white hover:text-mcl-gold transition-colors" aria-label="WhatsApp">
+                            <WhatsAppLink
+                                href="https://wa.me/5521985778195"
+                                className="text-white hover:text-mcl-gold transition-colors"
+                                ariaLabel="WhatsApp"
+                            >
                                 <WhatsAppIcon />
-                            </a>
+                            </WhatsAppLink>
                         </div>
                     </div>
 
@@ -81,7 +86,12 @@ export function Footer() {
                         </div>
                         <div className="text-gray-300 text-[15px] flex flex-col gap-1">
                             <span className="font-bold text-white">Telefone:</span>
-                            <a href="https://wa.me/5521985778195" target="_blank" rel="noopener noreferrer" className="hover:text-mcl-gold transition-colors">(21) 98577-8195</a>
+                            <WhatsAppLink
+                                href="https://wa.me/5521985778195"
+                                className="hover:text-mcl-gold transition-colors"
+                            >
+                                (21) 98577-8195
+                            </WhatsAppLink>
                         </div>
                         <div className="text-gray-300 text-[15px] flex flex-col gap-1">
                             <span className="font-bold text-white">E-mail:</span>
