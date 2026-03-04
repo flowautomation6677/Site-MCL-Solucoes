@@ -10,6 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mclsolucoes.com.br"),
   title: "MCL Soluções | Pisos Laminados e Vinílicos",
   description: "A base perfeita para o seu projeto. Encontre o piso ideal para sua casa ou escritório.",
   openGraph: {
@@ -81,6 +82,28 @@ export default function RootLayout({
             })(window, document, "clarity", "script", "vq505r344x");
           `}
         </Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "MCL Soluções",
+              "description": "A base perfeita para o seu projeto. Encontre o piso ideal para sua casa ou escritório.",
+              "url": "https://mclsolucoes.com.br",
+              "telephone": "+5521985778195",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Rua Senador Correia, 5",
+                "addressLocality": "Nova Iguaçu",
+                "addressRegion": "RJ",
+                "addressCountry": "BR"
+              },
+              "image": "https://mclsolucoes.com.br/og-logo-black.jpg",
+              "priceRange": "$$"
+            })
+          }}
+        />
       </head>
       <body className={`${inter.variable} antialiased`}>
         {children}

@@ -24,6 +24,7 @@ export default function Home() {
               src="/hero_home.jpg"
               alt="Sala com piso laminado perfeito"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 65vw, 65vw"
               className="object-cover"
               priority
             />
@@ -38,7 +39,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 relative z-10 w-full">
           <div className="max-w-xl py-12 md:py-16 lg:py-24 md:bg-gradient-to-r md:from-white md:via-white/95 md:to-transparent md:pr-12 text-center md:text-left">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold text-mcl-blue leading-[1.15] md:leading-[1.1] tracking-tight mb-4 md:mb-6 uppercase">
-              A BASE PERFEITA<br className="hidden md:block" /> PARA O SEU PROJETO.
+              A BASE PERFEITA<br className="hidden md:block" /> PARA O SEU PROJETO<br className="hidden lg:block" /> DE PISOS.
             </h1>
             <p className="text-base sm:text-lg text-gray-800 md:text-gray-700 mb-8 md:mb-10 leading-relaxed font-semibold md:font-medium mx-auto md:mx-0 max-w-sm md:max-w-none">
               Pisos laminados e vinílicos com instalação especializada e acabamento impecável.
@@ -70,6 +71,7 @@ export default function Home() {
                 src="/piso_laminado.jpg"
                 alt="Piso Laminado Textura"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
@@ -106,6 +108,7 @@ export default function Home() {
                 src="/piso_vinilico.jpg"
                 alt="Piso Vinílico Textura"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
