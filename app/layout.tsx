@@ -65,9 +65,7 @@ export default function RootLayout({
                 }
               };
               gtag('event', 'conversion', {
-                'send_to': 'AW-17988428930/_zHqCPqr3oEcEILJxoFD',
-                'value': 1.0,
-                'currency': 'BRL',
+                'send_to': 'AW-17988428930/z10tCNPot4IcEILJxoFD',
                 'event_callback': callback
               });
               return false;
