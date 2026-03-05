@@ -74,4 +74,33 @@ main()
 `;
 
 fs.writeFileSync('C:\\Users\\luiza\\OneDrive\\Documentos\\Antigravity\\Site MCL Soluções\\prisma\\seed.ts', seedContent);
-console.log("Updated seed.ts");
+
+const apiRouteContent = `import { NextResponse } from 'next/server';
+import { PrismaClient } from '@prisma/client';
+
+const prisma = new PrismaClient();
+
+const products = ${JSON.stringify(newProducts, null, 4)};
+
+export async function GET() {
+    try {
+        await prisma.product.deleteMany({});
+        for (const prod of products) {
+            await prisma.product.create({
+                data: prod
+            });
+        }
+        return NextResponse.json({ message: 'Database seeded successfully', count: products.length });
+    } catch (e: any) {
+        return NextResponse.json({ error: e.message }, { status: 500 });
+    }
+}
+`;
+
+const apiDir = 'C:\\Users\\luiza\\OneDrive\\Documentos\\Antigravity\\Site MCL Soluções\\app\\api\\seed';
+if (!fs.existsSync(apiDir)) {
+    fs.mkdirSync(apiDir, { recursive: true });
+}
+fs.writeFileSync(apiDir + '\\route.ts', apiRouteContent);
+
+console.log("Updated seed.ts and generated app/api/seed/route.ts for production.");
