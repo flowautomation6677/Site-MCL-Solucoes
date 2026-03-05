@@ -30,12 +30,22 @@ const newProducts = productsArray.filter(p => p.category === 'laminados' || p.ca
         description = `O piso vinílico ${p.name} é a solução inteligente para quem busca praticidade sem abrir mão da elegância. 100% resistente à água, é ideal para todos os ambientes internos. Este padrão confere um visual contemporâneo, somado a um excelente conforto acústico e térmico.`;
     }
 
+    // Slugify image URL to match safely on Linux
+    const imgParts = p.image.split('/');
+    const imgFile = imgParts.pop();
+    const extMatch = imgFile.match(/\\.([^.]+)$/);
+    const ext = extMatch ? extMatch[0].toLowerCase() : '';
+    const rawBase = imgFile.replace(extMatch ? extMatch[0] : '', '');
+    let cleanBase = rawBase.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    cleanBase = cleanBase.replace(/[^a-zA-Z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '').toLowerCase();
+    const safeImageUrl = '/' + imgParts.join('/') + '/' + cleanBase + ext;
+
     return {
         name: p.name,
         slug: slug,
         category: category,
         tone: tone,
-        imageUrl: '/' + p.image.replace(/\xA0/g, ' '),
+        imageUrl: safeImageUrl,
         benefits: JSON.stringify(['Instalação rápida', 'Acabamento impecável', category === 'Laminado' ? 'Conforto Térmico' : 'Resistente à Água']),
         thickness: category === 'Laminado' ? '7mm' : '5mm',
         resistance: category === 'Laminado' ? 'AC3' : '0.30mm (Capa)',
