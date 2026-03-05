@@ -35,7 +35,7 @@ const newProducts = productsArray.filter(p => p.category === 'laminados' || p.ca
         slug: slug,
         category: category,
         tone: tone,
-        imageUrl: '/' + p.image,
+        imageUrl: '/' + p.image.replace(/\xA0/g, ' '),
         benefits: JSON.stringify(['Instalação rápida', 'Acabamento impecável', category === 'Laminado' ? 'Conforto Térmico' : 'Resistente à Água']),
         thickness: category === 'Laminado' ? '7mm' : '5mm',
         resistance: category === 'Laminado' ? 'AC3' : '0.30mm (Capa)',
