@@ -33,7 +33,7 @@ const newProducts = productsArray.filter(p => p.category === 'laminados' || p.ca
     // Slugify image URL to match safely on Linux
     const imgParts = p.image.split('/');
     const imgFile = imgParts.pop();
-    const extMatch = imgFile.match(/\\.([^.]+)$/);
+    const extMatch = imgFile.match(/\.([^.]+)$/);
     const ext = extMatch ? extMatch[0].toLowerCase() : '';
     const rawBase = imgFile.replace(extMatch ? extMatch[0] : '', '');
     let cleanBase = rawBase.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
