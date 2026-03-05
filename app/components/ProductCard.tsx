@@ -25,11 +25,12 @@ export function ProductCard({ product, onOpenModal }: ProductCardProps) {
     if (product.techSpecsMisc) {
         try {
             const parsed = JSON.parse(product.techSpecsMisc)
-            const keys = Object.keys(parsed)
-            if (keys.length > 0) {
-                mockedSpec = `${keys[0]}: ${parsed[keys[0]]}`
+            if (parsed && typeof parsed === 'object') {
+                const desc = parsed['Descrição'] || parsed['Descrição Original']
+                if (desc) {
+                    mockedSpec = desc.length > 80 ? desc.substring(0, 80) + '...' : desc
+                }
             }
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (e) {
             // Ignore
         }
