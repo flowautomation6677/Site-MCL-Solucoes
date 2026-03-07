@@ -95,7 +95,7 @@ export function Footer() {
                         </div>
                         <div className="text-gray-300 text-[15px] flex flex-col gap-1">
                             <span className="font-bold text-white">E-mail:</span>
-                            <a href="mailto:contato@mclsolucoes.com.br" className="hover:text-white transition-colors">contato@mclsolucoes.com.br</a>
+                            <a href="mailto:vendas.mcl.solucoes@gmail.com" className="hover:text-white transition-colors">vendas.mcl.solucoes@gmail.com</a>
                         </div>
                         <div className="text-gray-300 text-[15px] flex flex-col gap-1">
                             <span className="font-bold text-white">Horário:</span>
