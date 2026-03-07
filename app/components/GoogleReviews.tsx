@@ -1,21 +1,24 @@
 import { Star } from "lucide-react"
+import Image from "next/image"
 
 const REVIEWS = [
     {
         id: 1,
-        name: "Marcelo Costa",
-        text: "Atendimento, instalação, material, pontualidade, tudo 100%.",
-        initials: "MC",
+        name: "Livia Teixeira",
+        text: "Excelente atendimento! Pontual e simplesmente ficou linda minha sala 🙏",
+        initials: "LT",
         color: "bg-blue-600",
-        date: "2 meses atrás"
+        date: "2 meses atrás",
+        image: "/images/livia-teixeira.jpg"
     },
     {
         id: 2,
-        name: "Fernanda Silva",
-        text: "Foi uma indicação do grupo do condomínio, preço muito bom mesmo!",
-        initials: "FS",
+        name: "Melina Pompeu",
+        text: "Serviço excelente, do primeiro contato à execução rápida. Segunda vez que contrato o serviço e recomendo.",
+        initials: "MP",
         color: "bg-green-600",
-        date: "4 meses atrás"
+        date: "4 meses atrás",
+        image: "/images/melina.jpg"
     },
     {
         id: 3,
@@ -23,7 +26,8 @@ const REVIEWS = [
         text: "Foram extremamente pontuais e a qualidade do trabalho ficou ótima.",
         initials: "RA",
         color: "bg-purple-600",
-        date: "5 meses atrás"
+        date: "5 meses atrás",
+        image: "/images/piso-laminado-eucafloor-prime-click-carvalho-rustico.jpg"
     },
     {
         id: 4,
@@ -31,7 +35,8 @@ const REVIEWS = [
         text: "Meu salão ficou lindíssimo. Serviço atencioso, diligente e de ótima qualidade.",
         initials: "JS",
         color: "bg-orange-600",
-        date: "7 meses atrás"
+        date: "7 meses atrás",
+        image: "/images/piso-vinilico-tarkett-injoy-papoula.jpg"
     },
 ]
 
@@ -96,10 +101,21 @@ export function GoogleReviews() {
                                     <Star key={`review-${review.id}-star-${i}`} className="w-4 h-4 fill-current" />
                                 ))}
                             </div>
-                            <p className="text-gray-700 text-sm leading-relaxed flex-1">
+                            <p className="text-gray-700 text-sm leading-relaxed mb-4">
                                 "{review.text}"
                             </p>
-                            <div className="mt-5 pt-4 border-t border-gray-100 flex items-center gap-2">
+                            {review.image && (
+                                <div className="relative w-full h-40 mt-auto rounded-xl overflow-hidden mb-4">
+                                    <Image
+                                        src={review.image}
+                                        alt={`Projeto de ${review.name}`}
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                                        className="object-cover hover:scale-105 transition-transform duration-500"
+                                    />
+                                </div>
+                            )}
+                            <div className="pt-4 border-t border-gray-100 flex items-center gap-2 mt-auto">
                                 <svg viewBox="0 0 24 24" className="w-4 h-4 text-mcl-blue fill-current">
                                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                                 </svg>
