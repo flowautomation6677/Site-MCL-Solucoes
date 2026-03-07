@@ -45,7 +45,7 @@ export default function Home() {
               Pisos laminados e vinílicos com instalação especializada e acabamento impecável.
             </p>
             <WhatsAppLink
-              href="https://wa.me/5521985778195?text=Olá! Gostaria de falar com um especialista em pisos."
+              href="https://wa.me/5521996749001?text=Olá! Gostaria de falar com um especialista em pisos."
               className="inline-block bg-mcl-blue text-white w-full sm:w-auto px-8 py-4 md:py-3.5 rounded-full font-bold shadow-lg hover:bg-[#081B3A] transition-transform active:scale-95 text-sm tracking-widest text-center"
             >
               FALAR COM UM ESPECIALISTA

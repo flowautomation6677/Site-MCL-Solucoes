@@ -91,7 +91,7 @@ export default function RootLayout({
               "name": "MCL Soluções",
               "description": "A base perfeita para o seu projeto. Encontre o piso ideal para sua casa ou escritório.",
               "url": "https://mclsolucoes.com.br",
-              "telephone": "+5521985778195",
+              "telephone": "+5521996749001",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Rua Senador Correia, 5",

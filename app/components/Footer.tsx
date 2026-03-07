@@ -48,7 +48,7 @@ export function Footer() {
                                 <InstagramIcon />
                             </a>
                             <WhatsAppLink
-                                href="https://wa.me/5521985778195"
+                                href="https://wa.me/5521996749001"
                                 className="text-white hover:text-mcl-gold transition-colors"
                                 ariaLabel="WhatsApp"
                             >
@@ -87,10 +87,10 @@ export function Footer() {
                         <div className="text-gray-300 text-[15px] flex flex-col gap-1">
                             <span className="font-bold text-white">Telefone:</span>
                             <WhatsAppLink
-                                href="https://wa.me/5521985778195"
+                                href="https://wa.me/5521996749001"
                                 className="hover:text-mcl-gold transition-colors"
                             >
-                                (21) 98577-8195
+                                (21) 99674-9001
                             </WhatsAppLink>
                         </div>
                         <div className="text-gray-300 text-[15px] flex flex-col gap-1">
