@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Header } from "./components/Header"
 import { Footer } from "./components/Footer"
 import { WhatsAppLink } from "./components/WhatsAppLink"
+import { GoogleReviews } from "./components/GoogleReviews"
 import { ShieldCheck, Droplet, DollarSign, Ruler } from "lucide-react"
 
 export const metadata = {
@@ -140,6 +141,8 @@ export default function Home() {
 
         </div>
       </div>
+
+      <GoogleReviews />
 
       <Footer />
     </main>
