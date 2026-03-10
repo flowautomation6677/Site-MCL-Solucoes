@@ -14,12 +14,13 @@ export const metadata = {
 }
 
 type SearchParamsProps = {
-    searchParams: Promise<{ tone?: string }>
+    readonly searchParams: Promise<{ tone?: string; q?: string }>
 }
 
 export default async function ViniticosPage(props: SearchParamsProps) {
     const params = await props.searchParams
     const toneFilter = params?.tone
+    const searchQuery = params?.q
 
     const whereClause: any = {
         category: { equals: 'Vinilico' }
@@ -29,6 +30,10 @@ export default async function ViniticosPage(props: SearchParamsProps) {
         if (toneFilter === 'tons-claros') whereClause.tone = { contains: 'Claro' }
         if (toneFilter === 'tons-escuros') whereClause.tone = { contains: 'Escuro' }
         if (toneFilter === 'amadeirados-quentes') whereClause.tone = { contains: 'Quente' }
+    }
+
+    if (searchQuery) {
+        whereClause.name = { contains: searchQuery, mode: 'insensitive' }
     }
 
     const rawProducts = await prisma.product.findMany({ where: whereClause })

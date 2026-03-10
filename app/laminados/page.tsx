@@ -14,12 +14,13 @@ export const metadata = {
 }
 
 type SearchParamsProps = {
-    searchParams: Promise<{ readonly tone?: string }>
+    readonly searchParams: Promise<{ readonly tone?: string; readonly q?: string }>
 }
 
 export default async function LaminadosPage(props: SearchParamsProps) {
     const params = await props.searchParams
     const toneFilter = params?.tone
+    const searchQuery = params?.q
 
     // Query construction for category = 'Laminado' and optional tone
     const whereClause: any = {
@@ -31,6 +32,10 @@ export default async function LaminadosPage(props: SearchParamsProps) {
         if (toneFilter === 'tons-claros') whereClause.tone = { contains: 'Claro' }
         if (toneFilter === 'tons-escuros') whereClause.tone = { contains: 'Escuro' }
         if (toneFilter === 'amadeirados-quentes') whereClause.tone = { contains: 'Quente' }
+    }
+
+    if (searchQuery) {
+        whereClause.name = { contains: searchQuery, mode: 'insensitive' }
     }
 
     const rawProducts = await prisma.product.findMany({ where: whereClause })
