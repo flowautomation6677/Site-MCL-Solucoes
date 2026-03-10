@@ -39,7 +39,7 @@ export function Header() {
                     <Link href="/laminados" className="hover:text-mcl-gold transition-colors">LAMINADOS</Link>
                     <Link href="/vinilicos" className="hover:text-mcl-gold transition-colors">VINÍLICOS</Link>
                     <Link href="#" className="hover:text-mcl-gold transition-colors">PROJETOS</Link>
-                    <Link href="#" className="hover:text-mcl-gold transition-colors">CONTATO</Link>
+                    <Link href="/contato" className="hover:text-mcl-gold transition-colors">CONTATO</Link>
                     <a
                         href="https://wa.me/5521996749001?text=Olá! Gostaria de solicitar um orçamento de pisos."
                         target="_blank"
@@ -58,7 +58,7 @@ export function Header() {
                     <Link href="/laminados" onClick={() => setIsMenuOpen(false)} className="hover:text-mcl-gold transition-colors w-full py-3 border-b border-gray-50 uppercase">LAMINADOS</Link>
                     <Link href="/vinilicos" onClick={() => setIsMenuOpen(false)} className="hover:text-mcl-gold transition-colors w-full py-3 border-b border-gray-50 uppercase">VINÍLICOS</Link>
                     <Link href="#" onClick={() => setIsMenuOpen(false)} className="hover:text-mcl-gold transition-colors w-full py-3 border-b border-gray-50 uppercase">PROJETOS</Link>
-                    <Link href="#" onClick={() => setIsMenuOpen(false)} className="hover:text-mcl-gold transition-colors w-full py-3 uppercase">CONTATO</Link>
+                    <Link href="/contato" onClick={() => setIsMenuOpen(false)} className="hover:text-mcl-gold transition-colors w-full py-3 uppercase">CONTATO</Link>
 
                     <a
                         href="https://wa.me/5521996749001?text=Olá! Gostaria de solicitar um orçamento de pisos."

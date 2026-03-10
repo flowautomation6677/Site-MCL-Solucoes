@@ -64,7 +64,7 @@ export function Footer() {
                         <Link href="/laminados" className="text-gray-300 hover:text-white text-[15px] transition-colors">Laminados</Link>
                         <Link href="/vinilicos" className="text-gray-300 hover:text-white text-[15px] transition-colors">Vinílicos</Link>
                         <Link href="#" className="text-gray-300 hover:text-white text-[15px] transition-colors">Projetos</Link>
-                        <Link href="#" className="text-gray-300 hover:text-white text-[15px] transition-colors">Contato</Link>
+                        <Link href="/contato" className="text-gray-300 hover:text-white text-[15px] transition-colors">Contato</Link>
                     </div>
 
                     {/* Informações */}
