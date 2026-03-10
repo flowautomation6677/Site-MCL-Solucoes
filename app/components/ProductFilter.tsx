@@ -59,7 +59,7 @@ export function ProductFilter({ basePath }: ProductFilterProps) {
                     type="text"
                     value={searchValue}
                     onChange={(e) => setSearchValue(e.target.value)}
-                    placeholder="Pesquisar pisos..."
+                    placeholder="Pesquisar Pisos, rodapés e acabamentos"
                     className="w-full px-5 py-3 pr-12 rounded-full border border-gray-300 focus:outline-none focus:border-mcl-blue focus:ring-1 focus:ring-mcl-blue shadow-sm text-sm"
                 />
                 <button type="submit" className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-mcl-blue transition-colors">
