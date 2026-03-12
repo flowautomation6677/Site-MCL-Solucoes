@@ -101,7 +101,7 @@ const products = [
         "techSpecsMisc": "{\"Descrição\":\"O piso laminado Prime Click Castanho Terracota oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
     },
     {
-        "name": "Piso laminado Eucafloor Prime Click - Kalahari",
+        "name": "Piso Laminado Eucafloor Prime Click Kalahari",
         "slug": "piso-laminado-eucafloor-prime-click-kalahari-9",
         "category": "Laminado",
         "tone": "Tons Claros",
@@ -110,7 +110,7 @@ const products = [
         "thickness": "7mm",
         "resistance": "AC3",
         "warranty": "10 anos",
-        "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso laminado Eucafloor Prime Click - Kalahari oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+        "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Eucafloor Prime Click Kalahari oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
     },
     {
         "name": "Piso laminado clicado Durafloor Nature Nagoya",
@@ -125,28 +125,28 @@ const products = [
         "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso laminado clicado Durafloor Nature Nagoya oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
     },
     {
-        "name": "Piso Taos Urban - Durafloor",
-        "slug": "piso-taos-urban-durafloor-11",
-        "category": "Laminado",
+        "name": "Piso vinílico Durafloor Urban Taos",
+        "slug": "piso-vinilico-durafloor-urban-taos-11",
+        "category": "Vinilico",
         "tone": "Tons Claros",
         "imageUrl": "/images/piso-taos-urban-durafloor.jpg",
-        "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-        "thickness": "7mm",
-        "resistance": "AC3",
+        "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Resistente à Água\"]",
+        "thickness": "5mm",
+        "resistance": "0.30mm (Capa)",
         "warranty": "10 anos",
-        "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Taos Urban - Durafloor oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+        "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Durafloor Urban Taos é a solução inteligente para quem busca praticidade sem abrir mão da elegância. 100% resistente à água, é ideal para todos os ambientes internos. Este padrão confere um visual contemporâneo, somado a um excelente conforto acústico e térmico.\"}"
     },
     {
-        "name": "Piso Laminado Durafloor Petra City",
-        "slug": "piso-laminado-durafloor-petra-city-12",
-        "category": "Laminado",
+        "name": "Piso Vinílico Durafloor City Petra",
+        "slug": "piso-vinilico-durafloor-city-petra-12",
+        "category": "Vinilico",
         "tone": "Tons Claros",
         "imageUrl": "/images/piso-laminado-durafloor-petra-city.jpg",
-        "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-        "thickness": "7mm",
-        "resistance": "AC3",
+        "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Resistente à Água\"]",
+        "thickness": "5mm",
+        "resistance": "0.30mm (Capa)",
         "warranty": "10 anos",
-        "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Durafloor Petra City oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+        "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Durafloor City Petra é a solução inteligente para quem busca praticidade sem abrir mão da elegância. 100% resistente à água, é ideal para todos os ambientes internos. Este padrão confere um visual contemporâneo, somado a um excelente conforto acústico e térmico.\"}"
     },
     {
         "name": "Piso Laminado Unique Ultra Durafloor Toledo",

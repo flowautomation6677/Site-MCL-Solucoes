@@ -36,6 +36,7 @@ export function Header() {
                 {/* Desktop Navigation */}
                 <nav className="hidden lg:flex items-center gap-6 font-bold text-sm text-mcl-blue tracking-wide">
                     <Link href="/" className="hover:text-mcl-gold transition-colors">INÍCIO</Link>
+                    <Link href="/quem-somos" className="hover:text-mcl-gold transition-colors">QUEM SOMOS</Link>
                     <Link href="/laminados" className="hover:text-mcl-gold transition-colors">LAMINADOS</Link>
                     <Link href="/vinilicos" className="hover:text-mcl-gold transition-colors">VINÍLICOS</Link>
                     <Link href="#" className="hover:text-mcl-gold transition-colors">PROJETOS</Link>
@@ -55,6 +56,7 @@ export function Header() {
             {isMenuOpen && (
                 <div className="lg:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl flex flex-col px-4 py-4 gap-2 font-bold text-sm text-mcl-blue tracking-wide z-50 animate-in slide-in-from-top-2">
                     <Link href="/" onClick={() => setIsMenuOpen(false)} className="hover:text-mcl-gold transition-colors w-full py-3 border-b border-gray-50 uppercase">INÍCIO</Link>
+                    <Link href="/quem-somos" onClick={() => setIsMenuOpen(false)} className="hover:text-mcl-gold transition-colors w-full py-3 border-b border-gray-50 uppercase">QUEM SOMOS</Link>
                     <Link href="/laminados" onClick={() => setIsMenuOpen(false)} className="hover:text-mcl-gold transition-colors w-full py-3 border-b border-gray-50 uppercase">LAMINADOS</Link>
                     <Link href="/vinilicos" onClick={() => setIsMenuOpen(false)} className="hover:text-mcl-gold transition-colors w-full py-3 border-b border-gray-50 uppercase">VINÍLICOS</Link>
                     <Link href="#" onClick={() => setIsMenuOpen(false)} className="hover:text-mcl-gold transition-colors w-full py-3 border-b border-gray-50 uppercase">PROJETOS</Link>

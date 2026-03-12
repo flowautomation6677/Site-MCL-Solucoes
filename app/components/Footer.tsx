@@ -70,7 +70,7 @@ export function Footer() {
                     {/* Informações */}
                     <div className="flex flex-col gap-4">
                         <h4 className="text-[16px] font-bold tracking-wider mb-2 text-white">INFORMAÇÕES</h4>
-                        <Link href="#" className="text-gray-300 hover:text-white text-[15px] transition-colors">Sobre Nós</Link>
+                        <Link href="/quem-somos" className="text-gray-300 hover:text-white text-[15px] transition-colors">Quem Somos</Link>
                         <Link href="#" className="text-gray-300 hover:text-white text-[15px] transition-colors">FAQ</Link>
                         <Link href="#" className="text-gray-300 hover:text-white text-[15px] transition-colors">Política de Privacidade</Link>
                         <Link href="#" className="text-gray-300 hover:text-white text-[15px] transition-colors">Termos de Uso</Link>
