@@ -24,6 +24,12 @@ export function WhatsAppLink({
     rel = "noopener noreferrer",
 }: WhatsAppLinkProps) {
     function handleClick(e: React.MouseEvent<HTMLAnchorElement>) {
+        if (globalThis.window !== undefined) {
+            const win = globalThis.window as any
+            win.dataLayer = win.dataLayer || []
+            win.dataLayer.push({ event: "click_whatsapp" })
+        }
+
         if (typeof globalThis.window?.gtag_report_conversion === "function") {
             e.preventDefault()
             globalThis.window.gtag_report_conversion(href)

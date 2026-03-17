@@ -1,6 +1,7 @@
 import { Mail, MapPin, Phone, Clock, Instagram, Star } from "lucide-react"
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
+import { WhatsAppLink } from "../components/WhatsAppLink"
 
 export default function ContatoPage() {
     return (
@@ -31,7 +32,7 @@ export default function ContatoPage() {
                         <div className="relative z-10 flex flex-col gap-8">
                             <h2 className="text-3xl font-bold text-white mb-2">Fale Conosco</h2>
 
-                            <a href="https://wa.me/5521996749001" target="_blank" rel="noopener noreferrer" className="flex items-center gap-5 hover:bg-white/5 p-3 -ml-3 rounded-2xl transition-colors group">
+                            <WhatsAppLink href="https://wa.me/5521996749001" className="flex items-center gap-5 hover:bg-white/5 p-3 -ml-3 rounded-2xl transition-colors group">
                                 <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center group-hover:bg-mcl-gold/20 group-hover:scale-105 transition-all shrink-0">
                                     <Phone className="w-7 h-7 text-mcl-gold" />
                                 </div>
@@ -39,7 +40,7 @@ export default function ContatoPage() {
                                     <span className="block text-sm text-gray-400 font-semibold mb-1 uppercase tracking-wider">Telefone / WhatsApp</span>
                                     <span className="block text-xl font-medium">(21) 99674-9001</span>
                                 </div>
-                            </a>
+                            </WhatsAppLink>
 
                             <a href="mailto:vendas.mcl.solucoes@gmail.com" className="flex items-center gap-5 hover:bg-white/5 p-3 -ml-3 rounded-2xl transition-colors group">
                                 <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center group-hover:bg-mcl-gold/20 group-hover:scale-105 transition-all shrink-0">

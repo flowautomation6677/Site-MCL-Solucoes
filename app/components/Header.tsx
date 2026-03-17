@@ -2,6 +2,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
+import { WhatsAppLink } from "./WhatsAppLink"
 
 export function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -41,14 +42,12 @@ export function Header() {
                     <Link href="/vinilicos" className="hover:text-mcl-gold transition-colors">VINÍLICOS</Link>
                     <Link href="#" className="hover:text-mcl-gold transition-colors">PROJETOS</Link>
                     <Link href="/contato" className="hover:text-mcl-gold transition-colors">CONTATO</Link>
-                    <a
+                    <WhatsAppLink
                         href="https://wa.me/5521996749001?text=Olá! Gostaria de solicitar um orçamento de pisos."
-                        target="_blank"
-                        rel="noopener noreferrer"
                         className="bg-mcl-gold text-white px-6 py-2.5 rounded-full hover:bg-[#8F684C] transition-all shadow-md ml-4 text-xs tracking-wider"
                     >
                         SOLICITAR ORÇAMENTO
-                    </a>
+                    </WhatsAppLink>
                 </nav>
             </div>
 
@@ -62,14 +61,12 @@ export function Header() {
                     <Link href="#" onClick={() => setIsMenuOpen(false)} className="hover:text-mcl-gold transition-colors w-full py-3 border-b border-gray-50 uppercase">PROJETOS</Link>
                     <Link href="/contato" onClick={() => setIsMenuOpen(false)} className="hover:text-mcl-gold transition-colors w-full py-3 uppercase">CONTATO</Link>
 
-                    <a
+                    <WhatsAppLink
                         href="https://wa.me/5521996749001?text=Olá! Gostaria de solicitar um orçamento de pisos."
-                        target="_blank"
-                        rel="noopener noreferrer"
                         className="bg-mcl-gold text-white px-6 py-3.5 mt-2 rounded-full hover:bg-[#8F684C] transition-all shadow-md text-xs tracking-wider w-full mb-2 text-center block"
                     >
                         SOLICITAR ORÇAMENTO
-                    </a>
+                    </WhatsAppLink>
                 </div>
             )}
         </header>
