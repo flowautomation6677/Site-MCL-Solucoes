@@ -8,18 +8,26 @@ type UTMAwareLinkProps = ComponentProps<typeof Link>
 
 function UTMAwareLinkContent(props: UTMAwareLinkProps) {
     const searchParams = useSearchParams()
-    const utmSource = searchParams.get("utm_source")
 
-    // If there is no utm_source, or if the href isn't a simple string, just return a normal Link.
-    if (!utmSource || typeof props.href !== "string") {
+    // All standard UTM parameters to propagate
+    const UTM_PARAMS = ["utm_source", "utm_campaign", "utm_medium", "utm_content", "utm_term"]
+
+    // Collect whichever UTM params exist in the current URL
+    const utmEntries = UTM_PARAMS
+        .map((key) => [key, searchParams.get(key)] as [string, string | null])
+        .filter(([, value]) => value !== null)
+
+    // If no UTMs or href isn't a string, return a normal Link
+    if (utmEntries.length === 0 || typeof props.href !== "string") {
         return <Link {...props} />
     }
 
-    // Append utm_source dynamically
-    const hrefObj = new URL(props.href, "http://localhost") // Dummy base for relative URLs
-    hrefObj.searchParams.set("utm_source", utmSource)
-    
-    // We only want the pathname + search
+    // Build new href copying all UTM params from the current URL
+    const hrefObj = new URL(props.href, "http://localhost")
+    for (const [key, value] of utmEntries) {
+        hrefObj.searchParams.set(key, value!)
+    }
+
     const newHref = `${hrefObj.pathname}${hrefObj.search}`
 
     return <Link {...props} href={newHref} />
