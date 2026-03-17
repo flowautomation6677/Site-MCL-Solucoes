@@ -1,7 +1,9 @@
+"use client"
+
 import { X } from "lucide-react"
 import Image from "next/image"
 import type { ProductProps } from "./ProductCard"
-import { WhatsAppLink } from "./WhatsAppLink"
+import { DynamicWhatsAppLink } from "./DynamicWhatsAppLink"
 
 interface ProductModalProps {
     readonly product: ProductProps
@@ -80,12 +82,12 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
 
                     {/* Call to Action Orçamento */}
                     <div className="mt-8 pt-4">
-                        <WhatsAppLink
-                            href={`https://wa.me/5521996749001?text=Olá! Tenho interesse no produto: ${encodeURIComponent(product.name)}. Gostaria de solicitar um orçamento.`}
+                        <DynamicWhatsAppLink
+                            productName={product.name}
                             className="block w-full py-4 bg-[#B48466] text-white rounded-[24px] font-bold text-[13px] tracking-widest shadow-md hover:bg-[#8F684C] hover:shadow-lg transition-colors active:scale-[0.98] text-center"
                         >
                             SOLICITAR ORÇAMENTO <br className="hidden md:block" /> DESTE PADRÃO
-                        </WhatsAppLink>
+                        </DynamicWhatsAppLink>
                     </div>
                 </div>
             </dialog>

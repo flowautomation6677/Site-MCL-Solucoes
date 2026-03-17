@@ -1,8 +1,8 @@
 import Image from "next/image"
-import Link from "next/link"
+import { UTMAwareLink as Link } from "./components/UTMAwareLink"
 import { Header } from "./components/Header"
 import { Footer } from "./components/Footer"
-import { WhatsAppLink } from "./components/WhatsAppLink"
+import { DynamicWhatsAppLink } from "./components/DynamicWhatsAppLink"
 import { GoogleReviews } from "./components/GoogleReviews"
 import { ShieldCheck, Droplet, DollarSign, Ruler } from "lucide-react"
 
@@ -45,12 +45,11 @@ export default function Home() {
             <p className="text-base sm:text-lg text-gray-800 md:text-gray-700 mb-8 md:mb-10 leading-relaxed font-semibold md:font-medium mx-auto md:mx-0 max-w-sm md:max-w-none">
               Pisos laminados e vinílicos com instalação especializada e acabamento impecável.
             </p>
-            <WhatsAppLink
-              href="https://wa.me/5521996749001?text=Olá! Gostaria de falar com um especialista em pisos."
+            <DynamicWhatsAppLink
               className="inline-block bg-mcl-blue text-white w-full sm:w-auto px-8 py-4 md:py-3.5 rounded-full font-bold shadow-lg hover:bg-[#081B3A] transition-transform active:scale-95 text-sm tracking-widest text-center"
             >
               FALAR COM UM ESPECIALISTA
-            </WhatsAppLink>
+            </DynamicWhatsAppLink>
           </div>
         </div>
       </section>

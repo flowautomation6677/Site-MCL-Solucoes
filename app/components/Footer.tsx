@@ -1,6 +1,6 @@
 import Image from "next/image"
-import Link from "next/link"
-import { WhatsAppLink } from "./WhatsAppLink"
+import { UTMAwareLink as Link } from "./UTMAwareLink"
+import { DynamicWhatsAppLink } from "./DynamicWhatsAppLink"
 
 const FacebookIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -47,13 +47,12 @@ export function Footer() {
                             <a href="https://www.instagram.com/mclsolucoes/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-mcl-gold transition-colors">
                                 <InstagramIcon />
                             </a>
-                            <WhatsAppLink
-                                href="https://wa.me/5521996749001"
+                            <DynamicWhatsAppLink
                                 className="text-white hover:text-mcl-gold transition-colors"
                                 ariaLabel="WhatsApp"
                             >
                                 <WhatsAppIcon />
-                            </WhatsAppLink>
+                            </DynamicWhatsAppLink>
                         </div>
                     </div>
 
@@ -86,12 +85,11 @@ export function Footer() {
                         </div>
                         <div className="text-gray-300 text-[15px] flex flex-col gap-1">
                             <span className="font-bold text-white">Telefone:</span>
-                            <WhatsAppLink
-                                href="https://wa.me/5521996749001"
+                            <DynamicWhatsAppLink
                                 className="hover:text-mcl-gold transition-colors"
                             >
                                 (21) 99674-9001
-                            </WhatsAppLink>
+                            </DynamicWhatsAppLink>
                         </div>
                         <div className="text-gray-300 text-[15px] flex flex-col gap-1">
                             <span className="font-bold text-white">E-mail:</span>
