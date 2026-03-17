@@ -27,6 +27,7 @@ function DynamicWhatsAppLinkContent({
         : defaultMessage
 
     const source = searchParams.get("utm_source")?.toLowerCase()
+    const campaign = searchParams.get("utm_campaign")?.toLowerCase()
     let mensagem = initialMsg
 
     if (source) {
@@ -51,6 +52,13 @@ function DynamicWhatsAppLinkContent({
         }
     }
 
+    // Adiciona rodapé de rastreamento UTM se houver source ou campaign
+    if (source || campaign) {
+        const utmSource = source ?? "direto"
+        const utmCampaign = campaign ?? "sem-campanha"
+        mensagem += `\n\n[UTM: ${utmSource} | ${utmCampaign}]`
+    }
+
     const waHref = `https://wa.me/5521996749001?text=${encodeURIComponent(mensagem)}`
 
     return (
@@ -59,6 +67,7 @@ function DynamicWhatsAppLinkContent({
         </WhatsAppLink>
     )
 }
+
 
 export function DynamicWhatsAppLink(props: DynamicWhatsAppLinkProps) {
     const fallbackMsg = props.productName 
