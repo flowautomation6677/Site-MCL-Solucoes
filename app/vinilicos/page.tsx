@@ -17,13 +17,15 @@ type SearchParamsProps = {
     readonly searchParams: Promise<{ tone?: string; q?: string }>
 }
 
+export const dynamic = 'force-dynamic'
+
 export default async function ViniticosPage(props: SearchParamsProps) {
     const params = await props.searchParams
     const toneFilter = params?.tone
     const searchQuery = params?.q
 
     const whereClause: any = {
-        category: { equals: 'Vinilico' }
+        category: { contains: 'Vinilico', mode: 'insensitive' }
     }
 
     if (toneFilter && toneFilter !== 'todos') {

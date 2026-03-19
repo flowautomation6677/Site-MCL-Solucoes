@@ -17,6 +17,8 @@ type SearchParamsProps = {
     readonly searchParams: Promise<{ readonly tone?: string; readonly q?: string }>
 }
 
+export const dynamic = 'force-dynamic'
+
 export default async function LaminadosPage(props: SearchParamsProps) {
     const params = await props.searchParams
     const toneFilter = params?.tone
@@ -24,7 +26,7 @@ export default async function LaminadosPage(props: SearchParamsProps) {
 
     // Query construction for category = 'Laminado' and optional tone
     const whereClause: any = {
-        category: { equals: 'Laminado' }
+        category: { contains: 'Laminado', mode: 'insensitive' }
     }
 
     if (toneFilter && toneFilter !== 'todos') {

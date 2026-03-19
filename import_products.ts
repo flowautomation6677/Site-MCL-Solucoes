@@ -30,43 +30,44 @@ async function main() {
   const destDir = path.join(currentDir, 'public', 'images', 'produtos');
 
   if (!fs.existsSync(destDir)) {
-    fs.mkdirSync(destDir, { recursive: true });
+      // If folder is gone, we just skip image copying part but we want to regenerate the data
+      console.log("Pasta de origem não encontrada, pulando cópia de imagens.");
+  } else {
+      if (!fs.existsSync(destDir)) {
+        fs.mkdirSync(destDir, { recursive: true });
+      }
   }
 
-  const files = fs.readdirSync(sourceDir);
+  const files = fs.existsSync(sourceDir) ? fs.readdirSync(sourceDir) : [];
 
   for (const file of files) {
     if (!file.match(/\.(jpe?g|png|gif|webp)$/i)) continue;
     
-    // Extracted name and category
     let category = "Laminado";
     let nameRaw = path.parse(file).name;
     
     if (nameRaw.toLowerCase().includes("vinílico") || nameRaw.toLowerCase().includes("vinilico")) {
-        category = "Vinílico";
+        category = "Vinilico"; // REMOVED ACCENT TO MATCH FRONTEND BETTER
     }
 
-    // Clean up name
     let cleanName = nameRaw
         .replace(/Piso(?:s)?\s+/i, '')
         .replace(/(?:Laminado|vin[ií]lico(?: colado)?)(?:\s+|-)?/i, '')
         .trim();
     
-    // Capitalize first letters just in case
     cleanName = cleanName.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
 
     let slug = slugify(cleanName);
-    
-    // Fallback if slug is empty
     if (!slug) slug = `produto-${Date.now()}`;
     
     const ext = path.extname(file);
     const newFileName = `${slug}${ext}`;
 
-    // Copy file
-    const sourcePath = path.join(sourceDir, file);
-    const destPath = path.join(destDir, newFileName);
-    fs.copyFileSync(sourcePath, destPath);
+    if (fs.existsSync(sourceDir)) {
+        const sourcePath = path.join(sourceDir, file);
+        const destPath = path.join(destDir, newFileName);
+        fs.copyFileSync(sourcePath, destPath);
+    }
 
     const imageUrl = `/images/produtos/${newFileName}`;
 
@@ -103,7 +104,7 @@ async function main() {
     });
   }
 
-  console.log("Importação de produtos concluída com sucesso.");
+  console.log("Importação concluída.");
 }
 
 main()
@@ -111,7 +112,7 @@ main()
     await prisma.$disconnect()
   })
   .catch(async (e) => {
-    console.error("Erro durante a importação:", e)
+    console.error("Erro:", e)
     await prisma.$disconnect()
     process.exit(1)
   })
