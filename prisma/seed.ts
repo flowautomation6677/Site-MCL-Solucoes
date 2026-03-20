@@ -773,6 +773,18 @@ async function main() {
     "techSpecsMisc": "{\"Descrição\":\"O Piso Vinílico Finottato Vital Terra Arada é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
   },
   {
+    "name": "Finottato Quadratta Cinza Urbano",
+    "slug": "finottato-quadratta-cinza-urbano",
+    "category": "Vinilico",
+    "tone": "Claros",
+    "imageUrl": "/images/produtos/finottato-quadratta-cinza-urbano.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Vinílico Finottato Quadratta Cinza Urbano é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
     "name": "Piso Laminado Gran Elegance Belmonte",
     "slug": "gran-elegance-belmonte-4",
     "category": "Laminado",
@@ -1047,14 +1059,6 @@ async function main() {
     "resistance": "0.30mm (Capa)",
     "warranty": "10 anos",
     "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Piso vinílico Vinilforte (cinza) granada é a solução inteligente para quem busca praticidade sem abrir mão da elegância. 100% resistente à água, é ideal para todos os ambientes internos. Este padrão confere um visual contemporâneo, somado a um excelente conforto acústico e térmico.\"}"
-  },
-  {
-    "name": "Eucafloor New Evidênce Veneto",
-    "slug": "piso-laminado-eucafloor-new-evidence-veneto",
-    "category": "Laminado",
-    "tone": "Claros",
-    "imageUrl": "/images/produtos/piso-laminado-eucafloor-new-evidence-veneto.jpeg",
-    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Eucafloor New Evidênce Veneto é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade.\"}"
   }
 ];
 
