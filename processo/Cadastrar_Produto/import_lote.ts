@@ -6,21 +6,21 @@ const prisma = new PrismaClient()
 
 function slugify(text: string) {
   return text.toString().toLowerCase()
-    .replace(/[àáâãäå]/g,"a")
-    .replace(/æ/g,"ae")
-    .replace(/ç/g,"c")
-    .replace(/[èéêë]/g,"e")
-    .replace(/[ìíîï]/g,"i")
-    .replace(/ñ/g,"n")
-    .replace(/[òóôõö]/g,"o")
-    .replace(/œ/g,"oe")
-    .replace(/[ùúûü]/g,"u")
-    .replace(/[ýÿ]/g,"y")
-    .replace(/\s+/g, '-')
-    .replace(/[^\w\-]+/g, '')
-    .replace(/\-\-+/g, '-')
-    .replace(/^-+/, '')
-    .replace(/-+$/, '');
+    .replaceAll(/[àáâãäå]/g,"a")
+    .replaceAll("æ","ae")
+    .replaceAll("ç","c")
+    .replaceAll(/[èéêë]/g,"e")
+    .replaceAll(/[ìíîï]/g,"i")
+    .replaceAll("ñ","n")
+    .replaceAll(/[òóôõö]/g,"o")
+    .replaceAll("œ","oe")
+    .replaceAll(/[ùúûü]/g,"u")
+    .replaceAll(/[ýÿ]/g,"y")
+    .replaceAll(/\s+/g, '-')
+    .replaceAll(/[^\w-]+/g, '')
+    .replaceAll(/--+/g, '-')
+    .replaceAll(/^-+/g, '')
+    .replaceAll(/-+$/g, '');
 }
 
 function classifyTone(name: string): string {
@@ -100,10 +100,10 @@ async function main() {
   const files = fs.readdirSync(sourceDir);
 
   for (const file of files) {
-    if (!file.match(/\.(jpe?g|png|gif|webp)$/i)) continue;
+    if (!/\.(jpe?g|png|gif|webp)$/i.test(file)) continue;
     
     let category = "Laminado";
-    let nameRaw = path.parse(file).name;
+    const nameRaw = path.parse(file).name;
     
     if (nameRaw.toLowerCase().includes("vinílico") || nameRaw.toLowerCase().includes("vinilico")) {
         category = "Vinilico";
@@ -114,7 +114,7 @@ async function main() {
         .replace(/(?:Laminado|vin[ií]lico(?: colado)?)(?:\s+|-)?/i, '')
         .trim();
     
-    cleanName = cleanName.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
+    cleanName = cleanName.replaceAll(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.slice(1).toLowerCase());
 
     let slug = slugify(cleanName);
     if (!slug) slug = `produto-${Date.now()}`;
@@ -162,12 +162,12 @@ async function main() {
   await updateSeed();
 }
 
-main()
-  .then(async () => {
-    await prisma.$disconnect()
-  })
-  .catch(async (e) => {
-    console.error("Erro:", e)
-    await prisma.$disconnect()
-    process.exit(1)
-  })
+try {
+    await main();
+} catch (e) {
+    console.error("Erro:", e);
+    await prisma.$disconnect();
+    process.exit(1);
+} finally {
+    await prisma.$disconnect();
+}

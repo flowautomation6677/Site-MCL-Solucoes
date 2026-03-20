@@ -2,15 +2,15 @@ import { PrismaClient } from '@prisma/client'
 
 const prisma = new PrismaClient()
 
-async function main() {
-  // Pega o termo de busca dos argumentos da linha de comando
-  const searchTerm = process.argv[2];
+// Pega o termo de busca dos argumentos da linha de comando
+const searchTerm = process.argv[2];
 
-  if (!searchTerm) {
-    console.log('Uso: npx tsx processo/buscar_produto.ts "termo de busca"');
-    process.exit(1);
-  }
+if (!searchTerm) {
+  console.log('Uso: npx tsx processo/Alterar_Nome_Produto/buscar_produto.ts "termo de busca"');
+  process.exit(1);
+}
 
+try {
   const products = await prisma.product.findMany({
     where: {
       name: {
@@ -25,8 +25,8 @@ async function main() {
   } else {
     console.log(JSON.stringify(products, null, 2));
   }
+} catch (error) {
+  console.error(error);
+} finally {
+  await prisma.$disconnect();
 }
-
-main()
-  .catch(console.error)
-  .finally(() => prisma.$disconnect())

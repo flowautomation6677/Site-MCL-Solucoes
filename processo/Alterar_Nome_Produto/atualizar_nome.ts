@@ -2,15 +2,15 @@ import { PrismaClient } from '@prisma/client'
 
 const prisma = new PrismaClient()
 
-async function main() {
-  const oldTerm = process.argv[2];
-  const newName = process.argv[3];
+const oldTerm = process.argv[2];
+const newName = process.argv[3];
 
-  if (!oldTerm || !newName) {
-    console.log('Uso: npx tsx processo/atualizar_nome.ts "termo antigo" "novo nome completo"');
-    process.exit(1);
-  }
+if (!oldTerm || !newName) {
+  console.log('Uso: npx tsx processo/Alterar_Nome_Produto/atualizar_nome.ts "termo antigo" "novo nome completo"');
+  process.exit(1);
+}
 
+try {
   const result = await prisma.product.updateMany({
     where: {
       name: {
@@ -25,8 +25,8 @@ async function main() {
 
   console.log(`✅ Sucesso! Foram atualizados ${result.count} produto(s).`);
   console.log(`Novo nome: "${newName}"`);
+} catch (error) {
+  console.error(error);
+} finally {
+  await prisma.$disconnect();
 }
-
-main()
-  .catch(console.error)
-  .finally(() => prisma.$disconnect())
