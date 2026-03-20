@@ -58,6 +58,11 @@ async function main() {
 
   console.log('🌱 Semeando banco de dados com ' + productsData.length + ' produtos...')
 
+  // Clean explicit duplicate on production
+  await prisma.product.deleteMany({
+    where: { slug: 'piso-laminado-eucafloor-new-evidence-veneto' }
+  });
+
   for (const data of productsData) {
     await prisma.product.upsert({
       where: { slug: data.slug },
@@ -162,12 +167,14 @@ async function main() {
   await updateSeed();
 }
 
-try {
-    await main();
-} catch (e) {
-    console.error("Erro:", e);
-    await prisma.$disconnect();
-    process.exit(1);
-} finally {
-    await prisma.$disconnect();
-}
+void (async () => {
+  try {
+      await main();
+  } catch (e) {
+      console.error("Erro:", e);
+      await prisma.$disconnect();
+      process.exit(1);
+  } finally {
+      await prisma.$disconnect();
+  }
+})();

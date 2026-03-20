@@ -10,23 +10,25 @@ if (!oldTerm || !newName) {
   process.exit(1);
 }
 
-try {
-  const result = await prisma.product.updateMany({
-    where: {
-      name: {
-        contains: oldTerm,
-        mode: 'insensitive'
+void (async () => {
+  try {
+    const result = await prisma.product.updateMany({
+      where: {
+        name: {
+          contains: oldTerm,
+          mode: 'insensitive'
+        }
+      },
+      data: {
+        name: newName
       }
-    },
-    data: {
-      name: newName
-    }
-  })
+    })
 
-  console.log(`✅ Sucesso! Foram atualizados ${result.count} produto(s).`);
-  console.log(`Novo nome: "${newName}"`);
-} catch (error) {
-  console.error(error);
-} finally {
-  await prisma.$disconnect();
-}
+    console.log(`✅ Sucesso! Foram atualizados ${result.count} produto(s).`);
+    console.log(`Novo nome: "${newName}"`);
+  } catch (error) {
+    console.error(error);
+  } finally {
+    await prisma.$disconnect();
+  }
+})();

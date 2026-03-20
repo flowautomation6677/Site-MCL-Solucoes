@@ -425,18 +425,6 @@ async function main() {
     "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Eucafloor Prime Carvalho Maiorca oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
   },
   {
-    "name": "Eucafloor New Evidênce Veneto",
-    "slug": "eucafloor-new-evidence-veneto",
-    "category": "Laminado",
-    "tone": "Claros",
-    "imageUrl": "/images/produtos/eucafloor-new-evidence-veneto.jpeg",
-    "benefits": null,
-    "thickness": null,
-    "resistance": null,
-    "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Eucafloor New Evidênce Veneto é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
-  },
-  {
     "name": "Finottato Imponente Caravela",
     "slug": "finottato-imponente-caravela",
     "category": "Vinilico",
@@ -797,6 +785,18 @@ async function main() {
     "techSpecsMisc": "{\"Descrição\":\"O piso laminado Gran Elegance Belmonte oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
   },
   {
+    "name": "Eucafloor New Evidênce Veneto",
+    "slug": "eucafloor-new-evidence-veneto",
+    "category": "Laminado",
+    "tone": "Claros",
+    "imageUrl": "/images/produtos/eucafloor-new-evidence-veneto.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Eucafloor New Evidênce Veneto é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
     "name": "Piso Laminado Quick-Step Vision Carvalho Vitoriano",
     "slug": "piso-laminado-quick-step-vision-carvalho-vitoriano-1",
     "category": "Laminado",
@@ -1063,6 +1063,11 @@ async function main() {
 ];
 
   console.log('🌱 Semeando banco de dados com ' + productsData.length + ' produtos...')
+
+  // Clean explicit duplicate on production
+  await prisma.product.deleteMany({
+    where: { slug: 'piso-laminado-eucafloor-new-evidence-veneto' }
+  });
 
   for (const data of productsData) {
     await prisma.product.upsert({
