@@ -46,20 +46,41 @@ Quando os arquivos estiverem todos na pasta devidamente nomeados, copie o prompt
 > **3. Gestão de Assets:** Copie os arquivos de imagem desta pasta raiz e jogue-os dentro de `public/images/produtos/`, salvando os arquivos destino unicamente usando o `slug` gerado e a extensão.
 > **4. Geração Dinâmica de Descrição:** O nosso schema.prisma permite um campo JSON `techSpecsMisc`. Gere um JSON no formato `{"Descrição": "..."}`. A descrição deve ser um copy de vendas convidativo focado no conforto termoacústico, modernidade e facilidade de limpeza adequados para pisos da categoria extraída.
 > **5. Execução Escalável:** Crie (ou sobrescreva se já existir) o arquivo script robusto `import_products.ts` manipulando o Prisma via `upsert` (baseado no slug) para garantir que possamos re-rodar sem duplicações.
-> **6. Roteiro Fim a Fim:** Rode o script utilizando `npx tsx import_products.ts` de forma autônoma (via ferramenta de shell).
+> **6. Atualização de Semente (Sync Produção):** Após a importação, gere automaticamente (ou atualize) o arquivo `prisma/seed.ts` de forma **auto-contida** (com os dados hardcoded no arquivo) para que possamos sincronizar com o Coolify.
+> **7. Roteiro Fim a Fim:** Rode o script utilizando `npx tsx import_products.ts` de forma autônoma (via ferramenta de shell).
 > 
 > Assim que a inclusão for finalizada e o banco de dados populado, por favor me avise para que eu faça a validação final."
 > 
 > **Fim do Prompt**
 ---
 
-## Passo 3. Revisão e Validação
+## Passo 3. Revisão e Validação Local
 
 Uma vez que a IA responda *"Os produtos foram inseridos..."*, faça o checklist:
 
-1. **Abra o localhost (ou versão de homologação/produção dependendo de onde rodou).**
+1. **Abra o localhost:3000**
 2. Acesse as páginas de `/laminados` e `/vinilicos`.
 3. Verifique se os produtos estão aparecendo.
 4. **Acione o Filtro de Tonalidade** para garantir que os que você escreveu `Claros` caíram no filtro correto.
 5. Clique em **"Ver Padrão"** (Modal) e avalie se a descrição automática de vendas que a IA gerou faz sentido para a qualidade requerida.
 6. A pasta temporária (ex: `novos_produtos`) já pode ser deletada do seu computador logo em seguida para organizar o ambiente.
+
+---
+
+## Passo 4. Sincronização com Produção (Coolify)
+
+Como o banco de dados do seu computador é separado do banco de dados da internet (Produção), você precisa "avisar" ao servidor que novos produtos chegaram.
+
+**1. Envie as alterações para o GitHub:**
+Após a IA terminar o Passo 2, ela terá gerado/atualizado o arquivo `prisma/seed.ts`. Você deve fazer o commit e push dessa alteração para o seu repositório.
+
+**2. No Painel do Coolify:**
+Aguarde o deploy automático terminar. Depois, você deve rodar o comando de "semeadura" no terminal do container ou garantir que sua Build inclua este comando:
+
+**Comando manual via Terminal (Console do Container no Coolify):**
+```bash
+npx prisma db seed
+```
+
+Este comando vai ler os dados que a IA deixou prontos no arquivo `prisma/seed.ts` e inseri-los no banco de dados da MCL Soluções na nuvem.
+

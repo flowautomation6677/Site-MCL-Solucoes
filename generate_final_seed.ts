@@ -1,28 +1,26 @@
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
 
-async function main() {
-  const products = JSON.parse(fs.readFileSync('all_products.json', 'utf-8'));
-  
-  const veneto = {
-    name: 'Eucafloor New Evidênce Veneto',
-    slug: 'piso-laminado-eucafloor-new-evidence-veneto',
-    category: 'Laminado',
-    tone: 'Claros',
-    imageUrl: '/images/produtos/piso-laminado-eucafloor-new-evidence-veneto.jpeg',
-    techSpecsMisc: JSON.stringify({
-      'Descrição': 'O Piso Laminado Eucafloor New Evidênce Veneto é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade.'
-    })
-  };
+const products = JSON.parse(fs.readFileSync('all_products.json', 'utf-8'));
 
-  if (!products.find((p: any) => p.slug === veneto.slug)) {
-    products.push(veneto);
-  }
+const veneto = {
+  name: 'Eucafloor New Evidênce Veneto',
+  slug: 'piso-laminado-eucafloor-new-evidence-veneto',
+  category: 'Laminado',
+  tone: 'Claros',
+  imageUrl: '/images/produtos/piso-laminado-eucafloor-new-evidence-veneto.jpeg',
+  techSpecsMisc: JSON.stringify({
+    'Descrição': 'O Piso Laminado Eucafloor New Evidênce Veneto é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade.'
+  })
+};
 
-  // Clean products for the seed (remove ids, dates)
-  const cleanProducts = products.map(({ id, createdAt, updatedAt, ...rest }: any) => rest);
+if (!products.some((p: any) => p.slug === veneto.slug)) {
+  products.push(veneto);
+}
 
-  const seedContent = `
+// Clean products for the seed (remove ids, dates)
+const cleanProducts = products.map(({ id, createdAt, updatedAt, ...rest }: any) => rest);
+
+const seedContent = `
 import { PrismaClient } from '@prisma/client'
 
 const prisma = new PrismaClient()
@@ -53,8 +51,5 @@ main()
   })
 `;
 
-  fs.writeFileSync('prisma/seed.ts', seedContent.trim());
-  console.log('✅ prisma/seed.ts gerado com sucesso.');
-}
-
-main();
+fs.writeFileSync('prisma/seed.ts', seedContent.trim());
+console.log('✅ prisma/seed.ts gerado com sucesso.');
