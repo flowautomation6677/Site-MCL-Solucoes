@@ -49,7 +49,7 @@ Quando os arquivos estiverem todos na pasta devidamente nomeados, copie o prompt
 > **6. Atualização de Semente (Sync Produção):** Após a importação, gere automaticamente (ou atualize) o arquivo `prisma/seed.ts` de forma **auto-contida** (com os dados hardcoded no arquivo) para que possamos sincronizar com o Coolify.
 > **7. Roteiro Fim a Fim:** Rode o script utilizando `npx tsx import_products.ts` de forma autônoma (via ferramenta de shell).
 > 
-> Assim que a inclusão for finalizada e o banco de dados populado, por favor me avise para que eu faça a validação final."
+> Assim que a inclusão for finalizada e o banco de dados populado, por favor me avise para que eu faça a validação final. use o código import_lote.ts para fazer a importação."
 > 
 > **Fim do Prompt**
 ---

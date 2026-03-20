@@ -305,6 +305,66 @@ async function main() {
     "techSpecsMisc": "{\"Descrição\":\"O Piso Vinílico Finottato Personalittè Lorena é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
   },
   {
+    "name": "Alto Tráfego Nature Nagoya",
+    "slug": "alto-trafego-nature-nagoya",
+    "category": "Laminado",
+    "tone": "Claros",
+    "imageUrl": "/images/produtos/alto-trafego-nature-nagoya.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Nature Nagoya é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Alto Tráfego Resistente à áGua Durafloor Unique Ultra Chamonix",
+    "slug": "alto-trafego-resistente-a-agua-durafloor-unique-ultra-chamonix",
+    "category": "Laminado",
+    "tone": "Claros",
+    "imageUrl": "/images/produtos/alto-trafego-resistente-a-agua-durafloor-unique-ultra-chamonix.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Resistente à áGua Durafloor Unique Ultra Chamonix é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Durafloor Alto Tráfego Nature Savoy",
+    "slug": "durafloor-alto-trafego-nature-savoy",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/durafloor-alto-trafego-nature-savoy.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Durafloor Alto Tráfego Nature Savoy é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Durafloor Alto Tráfego New Way Carvalho Avelã",
+    "slug": "durafloor-alto-trafego-new-way-carvalho-avela",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/durafloor-alto-trafego-new-way-carvalho-avela.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Durafloor Alto Tráfego New Way Carvalho Avelã é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Cor Calais Click Ecomex Eco Premium",
+    "slug": "cor-calais-click-ecomex-eco-premium",
+    "category": "Vinilico",
+    "tone": "Claros",
+    "imageUrl": "/images/produtos/cor-calais-click-ecomex-eco-premium.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Vinílico Cor Calais Click Ecomex Eco Premium é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
     "name": "Prime Click Castanho Terracota",
     "slug": "prime-click-castanho-terracota-8",
     "category": "Laminado",
@@ -989,6 +1049,18 @@ async function main() {
     "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Eucafloor Prime Click Nogueira Natural oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
   },
   {
+    "name": "Alto Tráfego Durafloor Nature Belgrado",
+    "slug": "alto-trafego-durafloor-nature-belgrado",
+    "category": "Laminado",
+    "tone": "Escuros",
+    "imageUrl": "/images/produtos/alto-trafego-durafloor-nature-belgrado.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Durafloor Nature Belgrado é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
     "name": "Piso Laminado Eucafloor Prime Elmo Natural",
     "slug": "piso-laminado-eucafloor-prime-elmo-natural-29",
     "category": "Laminado",
@@ -1059,6 +1131,90 @@ async function main() {
     "resistance": "0.30mm (Capa)",
     "warranty": "10 anos",
     "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Piso vinílico Vinilforte (cinza) granada é a solução inteligente para quem busca praticidade sem abrir mão da elegância. 100% resistente à água, é ideal para todos os ambientes internos. Este padrão confere um visual contemporâneo, somado a um excelente conforto acústico e térmico.\"}"
+  },
+  {
+    "name": "Alto Tráfego Durafloor Nature Cerezo Carmel",
+    "slug": "alto-trafego-durafloor-nature-cerezo-carmel",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/alto-trafego-durafloor-nature-cerezo-carmel.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Durafloor Nature Cerezo Carmel é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Alto Tráfego Durafloor Nature Cumaru Raiz",
+    "slug": "alto-trafego-durafloor-nature-cumaru-raiz",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/alto-trafego-durafloor-nature-cumaru-raiz.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Durafloor Nature Cumaru Raiz é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Alto Tráfego Durafloor New Way Carvalho Eterno",
+    "slug": "alto-trafego-durafloor-new-way-carvalho-eterno",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/alto-trafego-durafloor-new-way-carvalho-eterno.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Durafloor New Way Carvalho Eterno é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Alto Tráfego Durafloor New Way Maceió",
+    "slug": "alto-trafego-durafloor-new-way-maceio",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/alto-trafego-durafloor-new-way-maceio.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Durafloor New Way Maceió é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Alto Tráfego Durafloor New Way Petrópolis",
+    "slug": "alto-trafego-durafloor-new-way-petropolis",
+    "category": "Laminado",
+    "tone": "Escuros",
+    "imageUrl": "/images/produtos/alto-trafego-durafloor-new-way-petropolis.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Durafloor New Way Petrópolis é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Alto Tráfego Durafloor New Way ÁLamo",
+    "slug": "alto-trafego-durafloor-new-way-alamo",
+    "category": "Laminado",
+    "tone": "Claros",
+    "imageUrl": "/images/produtos/alto-trafego-durafloor-new-way-alamo.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Durafloor New Way ÁLamo é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Alto Tráfego Durafloor Studio Carvalho Hanover",
+    "slug": "alto-trafego-durafloor-studio-carvalho-hanover",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/alto-trafego-durafloor-studio-carvalho-hanover.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Durafloor Studio Carvalho Hanover é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
   }
 ];
 

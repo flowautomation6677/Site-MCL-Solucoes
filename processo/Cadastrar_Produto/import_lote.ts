@@ -27,10 +27,10 @@ function classifyTone(name: string): string {
     const lowerName = name.toLowerCase();
     
     // Palavras-chave para tons claros
-    const claros = ['nórdica', 'vanilla', 'prata', 'algodão', 'areia', 'ouro branco', 'cinza', 'nevoeiro', 'luz', 'veneto', 'cimento', 'nice', 'claro', 'bolonha'];
+    const claros = ['nórdica', 'vanilla', 'prata', 'algodão', 'areia', 'ouro branco', 'cinza', 'nevoeiro', 'luz', 'veneto', 'cimento', 'nice', 'claro', 'bolonha', 'chamonix', 'calais', 'nagoya', 'álamo'];
     
     // Palavras-chave para tons escuros
-    const escuros = ['moka', 'preto', 'antigo', 'chocolate', 'cosmos', 'terra', 'escuro'];
+    const escuros = ['moka', 'preto', 'antigo', 'chocolate', 'cosmos', 'terra', 'escuro', 'belgrado', 'petrópolis'];
     
     for (const kw of claros) {
         if (lowerName.includes(kw)) return "Claros";
