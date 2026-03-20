@@ -773,6 +773,18 @@ async function main() {
     "techSpecsMisc": "{\"Descrição\":\"O Piso Vinílico Finottato Vital Terra Arada é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
   },
   {
+    "name": "Piso Laminado Gran Elegance Belmonte",
+    "slug": "gran-elegance-belmonte-4",
+    "category": "Laminado",
+    "tone": "Tons Claros",
+    "imageUrl": "/images/gran-elegance-belmonte.jpeg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Gran Elegance Belmonte oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
     "name": "Piso Laminado Quick-Step Vision Carvalho Vitoriano",
     "slug": "piso-laminado-quick-step-vision-carvalho-vitoriano-1",
     "category": "Laminado",
@@ -807,18 +819,6 @@ async function main() {
     "resistance": "AC3",
     "warranty": "10 anos",
     "techSpecsMisc": "{\"Descrição\":\"O piso laminado piso laminado Eucafloor Prime CLICK - Carvalho Rústico oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Gran Elegance Belmonte",
-    "slug": "gran-elegance-belmonte-4",
-    "category": "Laminado",
-    "tone": "Tons Claros",
-    "imageUrl": "/images/gran-elegance-belmonte.jpeg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Gran Elegance Belmonte oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
   },
   {
     "name": "Max Elegance Claire Oak",
@@ -1047,6 +1047,14 @@ async function main() {
     "resistance": "0.30mm (Capa)",
     "warranty": "10 anos",
     "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Piso vinílico Vinilforte (cinza) granada é a solução inteligente para quem busca praticidade sem abrir mão da elegância. 100% resistente à água, é ideal para todos os ambientes internos. Este padrão confere um visual contemporâneo, somado a um excelente conforto acústico e térmico.\"}"
+  },
+  {
+    "name": "Eucafloor New Evidênce Veneto",
+    "slug": "piso-laminado-eucafloor-new-evidence-veneto",
+    "category": "Laminado",
+    "tone": "Claros",
+    "imageUrl": "/images/produtos/piso-laminado-eucafloor-new-evidence-veneto.jpeg",
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Eucafloor New Evidênce Veneto é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade.\"}"
   }
 ];
 
