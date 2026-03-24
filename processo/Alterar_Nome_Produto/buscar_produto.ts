@@ -10,25 +10,23 @@ if (!searchTerm) {
   process.exit(1);
 }
 
-void (async () => {
-  try {
-    const products = await prisma.product.findMany({
-      where: {
-        name: {
-          contains: searchTerm,
-          mode: 'insensitive'
-        }
+try {
+  const products = await prisma.product.findMany({
+    where: {
+      name: {
+        contains: searchTerm,
+        mode: 'insensitive'
       }
-    })
-
-    if (products.length === 0) {
-      console.log(`Nenhum produto encontrado com o termo: "${searchTerm}"`);
-    } else {
-      console.log(JSON.stringify(products, null, 2));
     }
-  } catch (error) {
-    console.error(error);
-  } finally {
-    await prisma.$disconnect();
+  })
+
+  if (products.length === 0) {
+    console.log(`Nenhum produto encontrado com o termo: "${searchTerm}"`);
+  } else {
+    console.log(JSON.stringify(products, null, 2));
   }
-})();
+} catch (error) {
+  console.error(error);
+} finally {
+  await prisma.$disconnect();
+}

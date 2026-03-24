@@ -38,7 +38,7 @@ export function ProductFilter({ basePath }: ProductFilterProps) {
         router.push(`${route}?${params.toString()}`, { scroll: false })
     }
 
-    const handleSearchSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSearchSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
         e.preventDefault()
         const params = new URLSearchParams(searchParams.toString())
         if (searchValue.trim()) {

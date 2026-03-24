@@ -1,7 +1,7 @@
 "use client"
 
 import { useSearchParams } from "next/navigation"
-import { useEffect, useState, Suspense } from "react"
+import { Suspense } from "react"
 import { WhatsAppLink } from "./WhatsAppLink"
 
 interface DynamicWhatsAppLinkProps {
@@ -32,24 +32,21 @@ function DynamicWhatsAppLinkContent({
 
     if (source) {
         const fonteFormatada = source.charAt(0).toUpperCase() + source.slice(1)
+        const isGoogle = source === "google" || source === "googleads"
+        const isMeta = source === "meta" || source === "facebook" || source === "instagram"
 
-        if (productName) {
-                if (source === "google" || source === "googleads") {
-                mensagem = `Olá! Vim pelo Google, tenho interesse no produto: ${productName}. Gostaria de solicitar um orçamento.`
-            } else if (source === "meta" || source === "facebook" || source === "instagram") {
-                mensagem = `Olá! Vi seu anúncio no ${fonteFormatada}, tenho interesse no produto: ${productName}. Gostaria de solicitar um orçamento.`
-            } else {
-                mensagem = `Olá! Vim através do ${fonteFormatada}, tenho interesse no produto: ${productName}. Gostaria de solicitar um orçamento.`
-            }
+        let prefixo = ""
+        if (isGoogle) {
+            prefixo = "Vim pelo Google"
+        } else if (isMeta) {
+            prefixo = `Vi seu anúncio no ${fonteFormatada}`
         } else {
-                if (source === "google" || source === "googleads") {
-                mensagem = "Olá! Vim pelo Google e gostaria de falar com um especialista em pisos."
-            } else if (source === "meta" || source === "facebook" || source === "instagram") {
-                mensagem = `Olá! Vi seu anúncio no ${fonteFormatada} e gostaria de falar com um especialista em pisos.`
-            } else {
-                mensagem = `Olá! Vim através do ${fonteFormatada} e gostaria de falar com um especialista em pisos.`
-            }
+            prefixo = `Vim através do ${fonteFormatada}`
         }
+
+        mensagem = productName 
+            ? `Olá! ${prefixo}, tenho interesse no produto: ${productName}. Gostaria de solicitar um orçamento.`
+            : `Olá! ${prefixo} e gostaria de falar com um especialista em pisos.`
     }
 
     // Adiciona rodapé de rastreamento UTM se houver source ou campaign

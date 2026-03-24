@@ -1,4 +1,23 @@
-import { Mail, MapPin, Phone, Clock, Instagram, Star } from "lucide-react"
+import { Mail, MapPin, Phone, Clock, Star } from "lucide-react"
+
+const InstagramIcon = ({ className }: { readonly className?: string }) => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={className}
+    >
+        <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+)
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
 import { DynamicWhatsAppLink } from "../components/DynamicWhatsAppLink"
@@ -90,7 +109,7 @@ export default function ContatoPage() {
                                     className="flex items-center gap-5 p-5 rounded-[1.5rem] border-2 border-gray-100 hover:border-pink-500 hover:shadow-lg hover:shadow-pink-500/10 transition-all group bg-gray-50/50"
                                 >
                                     <div className="w-14 h-14 bg-pink-100 text-pink-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
-                                        <Instagram className="w-7 h-7" />
+                                        <InstagramIcon className="w-7 h-7" />
                                     </div>
                                     <div className="flex-1">
                                         <span className="block font-extrabold text-[#081B3A] text-lg mb-1">Instagram</span>

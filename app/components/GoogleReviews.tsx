@@ -54,6 +54,7 @@ export function GoogleReviews() {
                                 <span className="text-[#081B3A] font-bold text-3xl">5,0</span>
                                 <div className="flex text-[#FBBC05]">
                                     {Array.from({ length: 5 }).map((_, i) => (
+                                        // eslint-disable-next-line react/no-array-index-key
                                         <Star key={`star-headline-${i}`} className="w-6 h-6 fill-current" />
                                     ))}
                                 </div>
@@ -98,6 +99,7 @@ export function GoogleReviews() {
                             </div>
                             <div className="flex text-[#FBBC05] mb-4">
                                 {Array.from({ length: 5 }).map((_, i) => (
+                                    // eslint-disable-next-line react/no-array-index-key
                                     <Star key={`review-${review.id}-star-${i}`} className="w-4 h-4 fill-current" />
                                 ))}
                             </div>
