@@ -161,18 +161,6 @@ const products = [
         "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Unique Ultra Durafloor Toledo oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
     },
     {
-        "name": "Piso laminado Eucafloor New Evidênce Veneto",
-        "slug": "piso-laminado-eucafloor-new-evid-nce-veneto-14",
-        "category": "Laminado",
-        "tone": "Tons Claros",
-        "imageUrl": "/images/piso-laminado-eucafloor-new-evidence-veneto.jpg",
-        "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-        "thickness": "7mm",
-        "resistance": "AC3",
-        "warranty": "10 anos",
-        "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso laminado Eucafloor New Evidênce Veneto oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-    },
-    {
         "name": "Piso Laminado Eucafloor Prime Cappuccino",
         "slug": "piso-laminado-eucafloor-prime-cappuccino-15",
         "category": "Laminado",

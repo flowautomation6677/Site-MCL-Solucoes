@@ -1937,18 +1937,6 @@ async function main() {
     "techSpecsMisc": "{\"Descrição\":\"O piso vinilico Ecomex Eco Home Lille proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   },
   {
-    "name": "Eucafloor New Evidênce Veneto",
-    "slug": "eucafloor-new-evidence-veneto",
-    "category": "Laminado",
-    "tone": "Claros",
-    "imageUrl": "/images/produtos/eucafloor-new-evidence-veneto.jpeg",
-    "benefits": null,
-    "thickness": null,
-    "resistance": null,
-    "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Eucafloor New Evidênce Veneto proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
-  },
-  {
     "name": "Ecomex Eco Hard Madrid",
     "slug": "ecomex-eco-hard-madrid",
     "category": "Vinilico",
