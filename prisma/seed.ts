@@ -989,18 +989,6 @@ async function main() {
     "techSpecsMisc": "{\"Descrição\":\"O piso laminado Gran Elegance Belmonte oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
   },
   {
-    "name": "Eucafloor New Evidênce Veneto",
-    "slug": "eucafloor-new-evidence-veneto",
-    "category": "Laminado",
-    "tone": "Claros",
-    "imageUrl": "/images/produtos/eucafloor-new-evidence-veneto.jpeg",
-    "benefits": null,
-    "thickness": null,
-    "resistance": null,
-    "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Eucafloor New Evidênce Veneto é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
-  },
-  {
     "name": "Piso Laminado Quick-Step Vision Carvalho Vitoriano",
     "slug": "piso-laminado-quick-step-vision-carvalho-vitoriano-1",
     "category": "Laminado",
@@ -1817,18 +1805,6 @@ async function main() {
     "techSpecsMisc": "{\"Descrição\":\"Versatilidade e charme natural em um só produto: o Quick-Step Impressive Carvalho Suave Médio 1856. Com tom equilibrado que combina com qualquer estilo de decoração, este laminado garante conforto termoacústico de primeira linha, superfície resistente ao uso diário e limpeza prática. Ideal para criar ambientes acolhedores e contemporâneos.\"}"
   },
   {
-    "name": "Ecomex Eco Home Lille",
-    "slug": "ecomex-eco-home-lille",
-    "category": "Vinilico",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/produtos/ecomex-eco-home-lille.jpeg",
-    "benefits": null,
-    "thickness": null,
-    "resistance": null,
-    "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O piso vinilico Ecomex Eco Home Lille proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
-  },
-  {
     "name": "Ecomex Eco Home Lyon",
     "slug": "ecomex-eco-home-lyon",
     "category": "Vinilico",
@@ -1947,6 +1923,30 @@ async function main() {
     "resistance": null,
     "warranty": null,
     "techSpecsMisc": "{\"Descrição\":\"O piso vinilico Ecomex Eco Home Bize proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
+  },
+  {
+    "name": "Ecomex Eco Home Lille",
+    "slug": "ecomex-eco-home-lille",
+    "category": "Vinilico",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/ecomex-eco-home-lille.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinilico Ecomex Eco Home Lille proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
+  },
+  {
+    "name": "Eucafloor New Evidênce Veneto",
+    "slug": "eucafloor-new-evidence-veneto",
+    "category": "Laminado",
+    "tone": "Claros",
+    "imageUrl": "/images/produtos/eucafloor-new-evidence-veneto.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Eucafloor New Evidênce Veneto proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   },
   {
     "name": "Ecomex Eco Hard Madrid",
