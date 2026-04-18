@@ -129,7 +129,7 @@ async function main() {
 
     let category = "Laminado";
     if (parsedCategory.toLowerCase().includes("vinílico") || parsedCategory.toLowerCase().includes("vinilico")) {
-        category = "Vinílico";
+        category = "Vinilico";
     }
 
     // Tratamento para montar o nome final do produto

@@ -1817,184 +1817,184 @@ async function main() {
     "techSpecsMisc": "{\"Descrição\":\"Versatilidade e charme natural em um só produto: o Quick-Step Impressive Carvalho Suave Médio 1856. Com tom equilibrado que combina com qualquer estilo de decoração, este laminado garante conforto termoacústico de primeira linha, superfície resistente ao uso diário e limpeza prática. Ideal para criar ambientes acolhedores e contemporâneos.\"}"
   },
   {
-    "name": "Ecomex Eco Home Bize",
-    "slug": "ecomex-eco-home-bize",
-    "category": "Vinílico",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/produtos/ecomex-eco-home-bize.jpeg",
-    "benefits": null,
-    "thickness": null,
-    "resistance": null,
-    "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Home Bize proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
-  },
-  {
     "name": "Ecomex Eco Home Lille",
     "slug": "ecomex-eco-home-lille",
-    "category": "Vinílico",
+    "category": "Vinilico",
     "tone": "Amadeirados Quentes",
     "imageUrl": "/images/produtos/ecomex-eco-home-lille.jpeg",
     "benefits": null,
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Home Lille proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinilico Ecomex Eco Home Lille proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   },
   {
     "name": "Ecomex Eco Home Lyon",
     "slug": "ecomex-eco-home-lyon",
-    "category": "Vinílico",
+    "category": "Vinilico",
     "tone": "Amadeirados Quentes",
     "imageUrl": "/images/produtos/ecomex-eco-home-lyon.jpeg",
     "benefits": null,
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Home Lyon proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinilico Ecomex Eco Home Lyon proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   },
   {
     "name": "Ecomex Eco Home Versalhes",
     "slug": "ecomex-eco-home-versalhes",
-    "category": "Vinílico",
+    "category": "Vinilico",
     "tone": "Escuros",
     "imageUrl": "/images/produtos/ecomex-eco-home-versalhes.jpeg",
     "benefits": null,
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Home Versalhes proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinilico Ecomex Eco Home Versalhes proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   },
   {
     "name": "Ecomex Eco Home Vienne",
     "slug": "ecomex-eco-home-vienne",
-    "category": "Vinílico",
+    "category": "Vinilico",
     "tone": "Amadeirados Quentes",
     "imageUrl": "/images/produtos/ecomex-eco-home-vienne.jpeg",
     "benefits": null,
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Home Vienne proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
-  },
-  {
-    "name": "Ecomex Eco Premium Cannes",
-    "slug": "ecomex-eco-premium-cannes",
-    "category": "Vinílico",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/produtos/ecomex-eco-premium-cannes.jpeg",
-    "benefits": null,
-    "thickness": null,
-    "resistance": null,
-    "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Premium Cannes proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinilico Ecomex Eco Home Vienne proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   },
   {
     "name": "Ecomex Eco Premium Lyon",
     "slug": "ecomex-eco-premium-lyon",
-    "category": "Vinílico",
+    "category": "Vinilico",
     "tone": "Amadeirados Quentes",
     "imageUrl": "/images/produtos/ecomex-eco-premium-lyon.jpeg",
     "benefits": null,
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Premium Lyon proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinilico Ecomex Eco Premium Lyon proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   },
   {
     "name": "Ecomex Eco Premium Marselha",
     "slug": "ecomex-eco-premium-marselha",
-    "category": "Vinílico",
+    "category": "Vinilico",
     "tone": "Amadeirados Quentes",
     "imageUrl": "/images/produtos/ecomex-eco-premium-marselha.jpeg",
     "benefits": null,
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Premium Marselha proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinilico Ecomex Eco Premium Marselha proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   },
   {
     "name": "Ecomex Eco Premium Metz",
     "slug": "ecomex-eco-premium-metz",
-    "category": "Vinílico",
+    "category": "Vinilico",
     "tone": "Amadeirados Quentes",
     "imageUrl": "/images/produtos/ecomex-eco-premium-metz.jpeg",
     "benefits": null,
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Premium Metz proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinilico Ecomex Eco Premium Metz proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   },
   {
     "name": "Ecomex Eco Premium Paris",
     "slug": "ecomex-eco-premium-paris",
-    "category": "Vinílico",
+    "category": "Vinilico",
     "tone": "Amadeirados Quentes",
     "imageUrl": "/images/produtos/ecomex-eco-premium-paris.jpeg",
     "benefits": null,
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Premium Paris proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinilico Ecomex Eco Premium Paris proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   },
   {
     "name": "Ecomex Eco Premium Toulon",
     "slug": "ecomex-eco-premium-toulon",
-    "category": "Vinílico",
+    "category": "Vinilico",
     "tone": "Amadeirados Quentes",
     "imageUrl": "/images/produtos/ecomex-eco-premium-toulon.jpeg",
     "benefits": null,
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Premium Toulon proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinilico Ecomex Eco Premium Toulon proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   },
   {
     "name": "Ecomex Eco Premium Troyes",
     "slug": "ecomex-eco-premium-troyes",
-    "category": "Vinílico",
+    "category": "Vinilico",
     "tone": "Amadeirados Quentes",
     "imageUrl": "/images/produtos/ecomex-eco-premium-troyes.jpeg",
     "benefits": null,
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Premium Troyes proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinilico Ecomex Eco Premium Troyes proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
+  },
+  {
+    "name": "Ecomex Eco Home Bize",
+    "slug": "ecomex-eco-home-bize",
+    "category": "Vinilico",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/ecomex-eco-home-bize.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinilico Ecomex Eco Home Bize proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   },
   {
     "name": "Ecomex Eco Hard Madrid",
     "slug": "ecomex-eco-hard-madrid",
-    "category": "Vinílico",
+    "category": "Vinilico",
     "tone": "Amadeirados Quentes",
     "imageUrl": "/images/produtos/ecomex-eco-hard-madrid.jpeg",
     "benefits": null,
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Hard Madrid proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinilico Ecomex Eco Hard Madrid proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   },
   {
     "name": "Ecomex Eco Hard Vigo",
     "slug": "ecomex-eco-hard-vigo",
-    "category": "Vinílico",
+    "category": "Vinilico",
     "tone": "Amadeirados Quentes",
     "imageUrl": "/images/produtos/ecomex-eco-hard-vigo.jpeg",
     "benefits": null,
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Hard Vigo proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinilico Ecomex Eco Hard Vigo proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   },
   {
     "name": "Ecomex Eco Home Nantes",
     "slug": "ecomex-eco-home-nantes",
-    "category": "Vinílico",
+    "category": "Vinilico",
     "tone": "Amadeirados Quentes",
     "imageUrl": "/images/produtos/ecomex-eco-home-nantes.jpeg",
     "benefits": null,
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Home Nantes proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinilico Ecomex Eco Home Nantes proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
+  },
+  {
+    "name": "Ecomex Eco Premium Cannes",
+    "slug": "ecomex-eco-premium-cannes",
+    "category": "Vinilico",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/ecomex-eco-premium-cannes.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinilico Ecomex Eco Premium Cannes proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   }
 ];
 
