@@ -5,402 +5,6 @@ const prisma = new PrismaClient()
 async function main() {
   const productsData = [
   {
-    "name": "Piso Laminado Quick-Step Vision Carvalho Vitoriano",
-    "slug": "piso-laminado-quick-step-vision-carvalho-vitoriano-1",
-    "category": "Laminado",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/piso-laminado-quick-step-vision-carvalho-vitoriano.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Quick-Step Vision Carvalho Vitoriano oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Piso Laminado Eucafloor Prime Fresno Decape New",
-    "slug": "piso-laminado-eucafloor-prime-fresno-decape-new-2",
-    "category": "Laminado",
-    "tone": "Tons Claros",
-    "imageUrl": "/images/piso-laminado-eucafloor-prime-fresno-decape-new.jpeg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Eucafloor Prime Fresno Decape New oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "piso laminado Eucafloor Prime CLICK - Carvalho Rústico",
-    "slug": "piso-laminado-eucafloor-prime-click-carvalho-r-stico-3",
-    "category": "Laminado",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/piso-laminado-eucafloor-prime-click-carvalho-rustico.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado piso laminado Eucafloor Prime CLICK - Carvalho Rústico oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Piso Laminado Gran Elegance Belmonte",
-    "slug": "gran-elegance-belmonte-4",
-    "category": "Laminado",
-    "tone": "Tons Claros",
-    "imageUrl": "/images/gran-elegance-belmonte.jpeg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Gran Elegance Belmonte oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Max Elegance Claire Oak",
-    "slug": "max-elegance-claire-oak-5",
-    "category": "Laminado",
-    "tone": "Tons Claros",
-    "imageUrl": "/images/max-elegance-claire-oak.jpeg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Max Elegance Claire Oak oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "New Evidence Click Moka",
-    "slug": "new-evidence-click-moka-6",
-    "category": "Laminado",
-    "tone": "Tons Claros",
-    "imageUrl": "/images/new-evidence-click-moka.jpeg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado New Evidence Click Moka oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Square Mármore Imperador",
-    "slug": "square-m-rmore-imperador-7",
-    "category": "Laminado",
-    "tone": "Tons Claros",
-    "imageUrl": "/images/square-marmore-imperador.jpeg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Square Mármore Imperador oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Prime Click Castanho Terracota",
-    "slug": "prime-click-castanho-terracota-8",
-    "category": "Laminado",
-    "tone": "Tons Escuros",
-    "imageUrl": "/images/prime-click-castanho-terracota.jpeg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Prime Click Castanho Terracota oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Piso Laminado Eucafloor Prime Click Kalahari",
-    "slug": "piso-laminado-eucafloor-prime-click-kalahari-9",
-    "category": "Laminado",
-    "tone": "Tons Claros",
-    "imageUrl": "/images/piso-laminado-eucafloor-prime-click-kalahari.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Eucafloor Prime Click Kalahari oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Piso laminado clicado Durafloor Nature Nagoya",
-    "slug": "piso-laminado-clicado-durafloor-nature-nagoya-10",
-    "category": "Laminado",
-    "tone": "Tons Claros",
-    "imageUrl": "/images/piso-laminado-clicado-durafloor-nature-nagoya.webp",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso laminado clicado Durafloor Nature Nagoya oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Piso vinílico Durafloor Urban Taos",
-    "slug": "piso-vinilico-durafloor-urban-taos-11",
-    "category": "Vinilico",
-    "tone": "Tons Claros",
-    "imageUrl": "/images/piso-taos-urban-durafloor.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Resistente à Água\"]",
-    "thickness": "5mm",
-    "resistance": "0.30mm (Capa)",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Durafloor Urban Taos é a solução inteligente para quem busca praticidade sem abrir mão da elegância. 100% resistente à água, é ideal para todos os ambientes internos. Este padrão confere um visual contemporâneo, somado a um excelente conforto acústico e térmico.\"}"
-  },
-  {
-    "name": "Piso Vinílico Durafloor City Petra",
-    "slug": "piso-vinilico-durafloor-city-petra-12",
-    "category": "Vinilico",
-    "tone": "Tons Claros",
-    "imageUrl": "/images/piso-laminado-durafloor-petra-city.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Resistente à Água\"]",
-    "thickness": "5mm",
-    "resistance": "0.30mm (Capa)",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Durafloor City Petra é a solução inteligente para quem busca praticidade sem abrir mão da elegância. 100% resistente à água, é ideal para todos os ambientes internos. Este padrão confere um visual contemporâneo, somado a um excelente conforto acústico e térmico.\"}"
-  },
-  {
-    "name": "Piso Laminado Unique Ultra Durafloor Toledo",
-    "slug": "piso-laminado-unique-ultra-durafloor-toledo-13",
-    "category": "Laminado",
-    "tone": "Tons Claros",
-    "imageUrl": "/images/piso-laminado-unique-ultra-durafloor-toledo.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Unique Ultra Durafloor Toledo oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Piso Laminado Eucafloor Prime Cappuccino",
-    "slug": "piso-laminado-eucafloor-prime-cappuccino-15",
-    "category": "Laminado",
-    "tone": "Tons Claros",
-    "imageUrl": "/images/piso-laminado-eucafloor-prime-cappuccino.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Eucafloor Prime Cappuccino oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Piso laminado Eucafloor prime Noce Oro",
-    "slug": "piso-laminado-eucafloor-prime-noce-oro-16",
-    "category": "Laminado",
-    "tone": "Tons Escuros",
-    "imageUrl": "/images/piso-laminado-eucafloor-prime-noce-oro.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso laminado Eucafloor prime Noce Oro oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Piso Laminado Eucafloor PRIME Carvalho",
-    "slug": "piso-laminado-eucafloor-prime-carvalho-17",
-    "category": "Laminado",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/piso-laminado-eucafloor-prime-carvalho.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Eucafloor PRIME Carvalho oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Piso Laminado Eucafloor Prime Carvalho Maiorca",
-    "slug": "piso-laminado-eucafloor-prime-carvalho-maiorca-18",
-    "category": "Laminado",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/piso-laminado-eucafloor-prime-carvalho-maiorca.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Eucafloor Prime Carvalho Maiorca oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Piso laminado Eucafloor Prime Click Andorra New",
-    "slug": "piso-laminado-eucafloor-prime-click-andorra-new-19",
-    "category": "Laminado",
-    "tone": "Tons Claros",
-    "imageUrl": "/images/piso-laminado-eucafloor-prime-click-andorra-new.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso laminado Eucafloor Prime Click Andorra New oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Piso laminado Quick Step Floorest PREMIERE Malta 1067",
-    "slug": "piso-laminado-quick-step-floorest-premiere-malta-1067-20",
-    "category": "Laminado",
-    "tone": "Tons Claros",
-    "imageUrl": "/images/piso-laminado-quick-step-floorest-premiere-malta-1067.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso laminado Quick Step Floorest PREMIERE Malta 1067 oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Piso laminado Durafloor New Way Carvalho York",
-    "slug": "piso-laminado-durafloor-new-way-carvalho-york-21",
-    "category": "Laminado",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/piso-laminado-durafloor-new-way-carvalho-york.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso laminado Durafloor New Way Carvalho York oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Piso Laminado Eucafloor Prime Click - Decapê",
-    "slug": "piso-laminado-eucafloor-prime-click-decap-22",
-    "category": "Laminado",
-    "tone": "Tons Claros",
-    "imageUrl": "/images/piso-laminado-eucafloor-prime-click-decape.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Eucafloor Prime Click - Decapê oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Piso laminado Eucafloor Prime Click Carvalho Coimbra",
-    "slug": "piso-laminado-eucafloor-prime-click-carvalho-coimbra-23",
-    "category": "Laminado",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/piso-laminado-eucafloor-prime-click-carvalho-coimbra.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso laminado Eucafloor Prime Click Carvalho Coimbra oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Piso laminado Eucafloor Prime Click Carvalho canela",
-    "slug": "piso-laminado-eucafloor-prime-click-carvalho-canela-24",
-    "category": "Laminado",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/piso-laminado-eucafloor-prime-click-carvalho-canela.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso laminado Eucafloor Prime Click Carvalho canela oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Piso laminado Eucafloor Prime Click Italian Noce",
-    "slug": "piso-laminado-eucafloor-prime-click-italian-noce-25",
-    "category": "Laminado",
-    "tone": "Tons Escuros",
-    "imageUrl": "/images/piso-laminado-eucafloor-prime-click-italian-noce.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso laminado Eucafloor Prime Click Italian Noce oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Piso Laminado Eucafloor prime Lâmina Amêndoa",
-    "slug": "piso-laminado-eucafloor-prime-l-mina-am-ndoa-26",
-    "category": "Laminado",
-    "tone": "Tons Claros",
-    "imageUrl": "/images/piso-laminado-eucafloor-prime-lamina-amendoa.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Eucafloor prime Lâmina Amêndoa oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Piso laminado Eucafloor Prime Click Nogueira Malaga",
-    "slug": "piso-laminado-eucafloor-prime-click-nogueira-malaga-27",
-    "category": "Laminado",
-    "tone": "Tons Escuros",
-    "imageUrl": "/images/piso-laminado-eucafloor-prime-click-nogueira-malaga.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso laminado Eucafloor Prime Click Nogueira Malaga oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Piso Laminado Eucafloor Prime Click Nogueira Natural",
-    "slug": "piso-laminado-eucafloor-prime-click-nogueira-natural-28",
-    "category": "Laminado",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/piso-laminado-eucafloor-prime-click-nogueira-natural.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Eucafloor Prime Click Nogueira Natural oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Piso Laminado Eucafloor Prime Elmo Natural",
-    "slug": "piso-laminado-eucafloor-prime-elmo-natural-29",
-    "category": "Laminado",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/piso-laminado-eucafloor-prime-elmo-natural.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Eucafloor Prime Elmo Natural oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Piso laminado Eucafloor Prime Valência",
-    "slug": "piso-laminado-eucafloor-prime-val-ncia-30",
-    "category": "Laminado",
-    "tone": "Tons Claros",
-    "imageUrl": "/images/piso-laminado-eucafloor-prime-valencia.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso laminado Eucafloor Prime Valência oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Piso Laminado Eucafloor Prime Click Cacau Rodapé Cor Do Piso",
-    "slug": "piso-laminado-eucafloor-prime-click-cacau-rodap-cor-do-piso-31",
-    "category": "Laminado",
-    "tone": "Tons Escuros",
-    "imageUrl": "/images/piso-laminado-eucafloor-prime-click-cacau-rodape-cor-do-piso.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
-    "thickness": "7mm",
-    "resistance": "AC3",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Eucafloor Prime Click Cacau Rodapé Cor Do Piso oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
-  },
-  {
-    "name": "Piso vinílico tarkett Injoy Papoula",
-    "slug": "piso-vin-lico-tarkett-injoy-papoula-36",
-    "category": "Vinilico",
-    "tone": "Tons Claros",
-    "imageUrl": "/images/piso-vinilico-tarkett-injoy-papoula.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Resistente à Água\"]",
-    "thickness": "5mm",
-    "resistance": "0.30mm (Capa)",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Piso vinílico tarkett Injoy Papoula é a solução inteligente para quem busca praticidade sem abrir mão da elegância. 100% resistente à água, é ideal para todos os ambientes internos. Este padrão confere um visual contemporâneo, somado a um excelente conforto acústico e térmico.\"}"
-  },
-  {
-    "name": "Piso vinílico Finottato Imponente Chocolate Suíço",
-    "slug": "piso-vin-lico-finottato-imponente-chocolate-su-o-39",
-    "category": "Vinilico",
-    "tone": "Tons Escuros",
-    "imageUrl": "/images/piso-vinilico-finottato-imponente-chocolate-suico.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Resistente à Água\"]",
-    "thickness": "5mm",
-    "resistance": "0.30mm (Capa)",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Piso vinílico Finottato Imponente Chocolate Suíço é a solução inteligente para quem busca praticidade sem abrir mão da elegância. 100% resistente à água, é ideal para todos os ambientes internos. Este padrão confere um visual contemporâneo, somado a um excelente conforto acústico e térmico.\"}"
-  },
-  {
-    "name": "Piso vinílico Vinilforte (cinza) granada",
-    "slug": "piso-vin-lico-vinilforte-cinza-granada-40",
-    "category": "Vinilico",
-    "tone": "Tons Claros",
-    "imageUrl": "/images/piso-vinilico-vinilforte-cinza-granada.jpg",
-    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Resistente à Água\"]",
-    "thickness": "5mm",
-    "resistance": "0.30mm (Capa)",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Piso vinílico Vinilforte (cinza) granada é a solução inteligente para quem busca praticidade sem abrir mão da elegância. 100% resistente à água, é ideal para todos os ambientes internos. Este padrão confere um visual contemporâneo, somado a um excelente conforto acústico e térmico.\"}"
-  },
-  {
     "name": "Durafllor New Way  Nórdica",
     "slug": "durafllor-new-way-nordica",
     "category": "Laminado",
@@ -701,16 +305,196 @@ async function main() {
     "techSpecsMisc": "{\"Descrição\":\"O Piso Vinílico Finottato Personalittè Lorena é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
   },
   {
-    "name": "Eucafloor New Evidênce Veneto",
-    "slug": "eucafloor-new-evidence-veneto",
+    "name": "Alto Tráfego Nature Nagoya",
+    "slug": "alto-trafego-nature-nagoya",
     "category": "Laminado",
     "tone": "Claros",
-    "imageUrl": "/images/produtos/eucafloor-new-evidence-veneto.jpeg",
+    "imageUrl": "/images/produtos/alto-trafego-nature-nagoya.jpeg",
     "benefits": null,
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Eucafloor New Evidênce Veneto é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Nature Nagoya é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Alto Tráfego Resistente à áGua Durafloor Unique Ultra Chamonix",
+    "slug": "alto-trafego-resistente-a-agua-durafloor-unique-ultra-chamonix",
+    "category": "Laminado",
+    "tone": "Claros",
+    "imageUrl": "/images/produtos/alto-trafego-resistente-a-agua-durafloor-unique-ultra-chamonix.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Resistente à áGua Durafloor Unique Ultra Chamonix é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Durafloor Alto Tráfego Nature Savoy",
+    "slug": "durafloor-alto-trafego-nature-savoy",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/durafloor-alto-trafego-nature-savoy.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Durafloor Alto Tráfego Nature Savoy é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Durafloor Alto Tráfego New Way Carvalho Avelã",
+    "slug": "durafloor-alto-trafego-new-way-carvalho-avela",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/durafloor-alto-trafego-new-way-carvalho-avela.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Durafloor Alto Tráfego New Way Carvalho Avelã é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Cor Calais Click Ecomex Eco Premium",
+    "slug": "cor-calais-click-ecomex-eco-premium",
+    "category": "Vinilico",
+    "tone": "Claros",
+    "imageUrl": "/images/produtos/cor-calais-click-ecomex-eco-premium.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Vinílico Cor Calais Click Ecomex Eco Premium é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Durafloor Unique Nogueira Florida",
+    "slug": "durafloor-unique-nogueira-florida",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/durafloor-unique-nogueira-florida.jpeg",
+    "benefits": "[\"Conforto Térmico\",\"Limpeza Fácil\",\"Alta Durabilidade\"]",
+    "thickness": "7mm",
+    "resistance": "AC4",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Durafloor Unique Nogueira Florida é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Prime Click Castanho Terracota",
+    "slug": "prime-click-castanho-terracota-8",
+    "category": "Laminado",
+    "tone": "Tons Escuros",
+    "imageUrl": "/images/prime-click-castanho-terracota.jpeg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Prime Click Castanho Terracota oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "Piso Laminado Eucafloor Prime Click Kalahari",
+    "slug": "piso-laminado-eucafloor-prime-click-kalahari-9",
+    "category": "Laminado",
+    "tone": "Tons Claros",
+    "imageUrl": "/images/piso-laminado-eucafloor-prime-click-kalahari.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Eucafloor Prime Click Kalahari oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "Piso laminado clicado Durafloor Nature Nagoya",
+    "slug": "piso-laminado-clicado-durafloor-nature-nagoya-10",
+    "category": "Laminado",
+    "tone": "Tons Claros",
+    "imageUrl": "/images/piso-laminado-clicado-durafloor-nature-nagoya.webp",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso laminado clicado Durafloor Nature Nagoya oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "Piso vinílico Durafloor Urban Taos",
+    "slug": "piso-vinilico-durafloor-urban-taos-11",
+    "category": "Vinilico",
+    "tone": "Tons Claros",
+    "imageUrl": "/images/piso-taos-urban-durafloor.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Resistente à Água\"]",
+    "thickness": "5mm",
+    "resistance": "0.30mm (Capa)",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Durafloor Urban Taos é a solução inteligente para quem busca praticidade sem abrir mão da elegância. 100% resistente à água, é ideal para todos os ambientes internos. Este padrão confere um visual contemporâneo, somado a um excelente conforto acústico e térmico.\"}"
+  },
+  {
+    "name": "Piso Vinílico Durafloor City Petra",
+    "slug": "piso-vinilico-durafloor-city-petra-12",
+    "category": "Vinilico",
+    "tone": "Tons Claros",
+    "imageUrl": "/images/piso-laminado-durafloor-petra-city.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Resistente à Água\"]",
+    "thickness": "5mm",
+    "resistance": "0.30mm (Capa)",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Durafloor City Petra é a solução inteligente para quem busca praticidade sem abrir mão da elegância. 100% resistente à água, é ideal para todos os ambientes internos. Este padrão confere um visual contemporâneo, somado a um excelente conforto acústico e térmico.\"}"
+  },
+  {
+    "name": "Piso Laminado Unique Ultra Durafloor Toledo",
+    "slug": "piso-laminado-unique-ultra-durafloor-toledo-13",
+    "category": "Laminado",
+    "tone": "Tons Claros",
+    "imageUrl": "/images/piso-laminado-unique-ultra-durafloor-toledo.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Unique Ultra Durafloor Toledo oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "Piso Laminado Eucafloor Prime Cappuccino",
+    "slug": "piso-laminado-eucafloor-prime-cappuccino-15",
+    "category": "Laminado",
+    "tone": "Tons Claros",
+    "imageUrl": "/images/piso-laminado-eucafloor-prime-cappuccino.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Eucafloor Prime Cappuccino oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "Piso laminado Eucafloor prime Noce Oro",
+    "slug": "piso-laminado-eucafloor-prime-noce-oro-16",
+    "category": "Laminado",
+    "tone": "Tons Escuros",
+    "imageUrl": "/images/piso-laminado-eucafloor-prime-noce-oro.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso laminado Eucafloor prime Noce Oro oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "Piso Laminado Eucafloor PRIME Carvalho",
+    "slug": "piso-laminado-eucafloor-prime-carvalho-17",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/piso-laminado-eucafloor-prime-carvalho.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Eucafloor PRIME Carvalho oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "Piso Laminado Eucafloor Prime Carvalho Maiorca",
+    "slug": "piso-laminado-eucafloor-prime-carvalho-maiorca-18",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/piso-laminado-eucafloor-prime-carvalho-maiorca.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Eucafloor Prime Carvalho Maiorca oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
   },
   {
     "name": "Finottato Imponente Caravela",
@@ -1049,186 +833,6 @@ async function main() {
     "techSpecsMisc": "{\"Descrição\":\"O Piso Vinílico Finottato Vital Terra Arada é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
   },
   {
-    "name": "Finottato Quadratta Cinza Urbano",
-    "slug": "finottato-quadratta-cinza-urbano",
-    "category": "Vinilico",
-    "tone": "Claros",
-    "imageUrl": "/images/produtos/finottato-quadratta-cinza-urbano.jpeg",
-    "benefits": null,
-    "thickness": null,
-    "resistance": null,
-    "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O Piso Vinílico Finottato Quadratta Cinza Urbano é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
-  },
-  {
-    "name": "Alto Tráfego Durafloor Nature Belgrado",
-    "slug": "alto-trafego-durafloor-nature-belgrado",
-    "category": "Laminado",
-    "tone": "Escuros",
-    "imageUrl": "/images/produtos/alto-trafego-durafloor-nature-belgrado.jpeg",
-    "benefits": null,
-    "thickness": null,
-    "resistance": null,
-    "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Durafloor Nature Belgrado é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
-  },
-  {
-    "name": "Alto Tráfego Durafloor Nature Cerezo Carmel",
-    "slug": "alto-trafego-durafloor-nature-cerezo-carmel",
-    "category": "Laminado",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/produtos/alto-trafego-durafloor-nature-cerezo-carmel.jpeg",
-    "benefits": null,
-    "thickness": null,
-    "resistance": null,
-    "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Durafloor Nature Cerezo Carmel é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
-  },
-  {
-    "name": "Alto Tráfego Durafloor Nature Cumaru Raiz",
-    "slug": "alto-trafego-durafloor-nature-cumaru-raiz",
-    "category": "Laminado",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/produtos/alto-trafego-durafloor-nature-cumaru-raiz.jpeg",
-    "benefits": null,
-    "thickness": null,
-    "resistance": null,
-    "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Durafloor Nature Cumaru Raiz é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
-  },
-  {
-    "name": "Alto Tráfego Durafloor New Way Carvalho Eterno",
-    "slug": "alto-trafego-durafloor-new-way-carvalho-eterno",
-    "category": "Laminado",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/produtos/alto-trafego-durafloor-new-way-carvalho-eterno.jpeg",
-    "benefits": null,
-    "thickness": null,
-    "resistance": null,
-    "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Durafloor New Way Carvalho Eterno é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
-  },
-  {
-    "name": "Alto Tráfego Durafloor New Way Maceió",
-    "slug": "alto-trafego-durafloor-new-way-maceio",
-    "category": "Laminado",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/produtos/alto-trafego-durafloor-new-way-maceio.jpeg",
-    "benefits": null,
-    "thickness": null,
-    "resistance": null,
-    "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Durafloor New Way Maceió é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
-  },
-  {
-    "name": "Alto Tráfego Durafloor New Way Petrópolis",
-    "slug": "alto-trafego-durafloor-new-way-petropolis",
-    "category": "Laminado",
-    "tone": "Escuros",
-    "imageUrl": "/images/produtos/alto-trafego-durafloor-new-way-petropolis.jpeg",
-    "benefits": null,
-    "thickness": null,
-    "resistance": null,
-    "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Durafloor New Way Petrópolis é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
-  },
-  {
-    "name": "Alto Tráfego Durafloor New Way ÁLamo",
-    "slug": "alto-trafego-durafloor-new-way-alamo",
-    "category": "Laminado",
-    "tone": "Claros",
-    "imageUrl": "/images/produtos/alto-trafego-durafloor-new-way-alamo.jpeg",
-    "benefits": null,
-    "thickness": null,
-    "resistance": null,
-    "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Durafloor New Way ÁLamo é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
-  },
-  {
-    "name": "Alto Tráfego Durafloor Studio Carvalho Hanover",
-    "slug": "alto-trafego-durafloor-studio-carvalho-hanover",
-    "category": "Laminado",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/produtos/alto-trafego-durafloor-studio-carvalho-hanover.jpeg",
-    "benefits": null,
-    "thickness": null,
-    "resistance": null,
-    "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Durafloor Studio Carvalho Hanover é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
-  },
-  {
-    "name": "Alto Tráfego Nature Nagoya",
-    "slug": "alto-trafego-nature-nagoya",
-    "category": "Laminado",
-    "tone": "Claros",
-    "imageUrl": "/images/produtos/alto-trafego-nature-nagoya.jpeg",
-    "benefits": null,
-    "thickness": null,
-    "resistance": null,
-    "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Nature Nagoya é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
-  },
-  {
-    "name": "Alto Tráfego Resistente à áGua Durafloor Unique Ultra Chamonix",
-    "slug": "alto-trafego-resistente-a-agua-durafloor-unique-ultra-chamonix",
-    "category": "Laminado",
-    "tone": "Claros",
-    "imageUrl": "/images/produtos/alto-trafego-resistente-a-agua-durafloor-unique-ultra-chamonix.jpeg",
-    "benefits": null,
-    "thickness": null,
-    "resistance": null,
-    "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Resistente à áGua Durafloor Unique Ultra Chamonix é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
-  },
-  {
-    "name": "Durafloor Alto Tráfego Nature Savoy",
-    "slug": "durafloor-alto-trafego-nature-savoy",
-    "category": "Laminado",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/produtos/durafloor-alto-trafego-nature-savoy.jpeg",
-    "benefits": null,
-    "thickness": null,
-    "resistance": null,
-    "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Durafloor Alto Tráfego Nature Savoy é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
-  },
-  {
-    "name": "Durafloor Alto Tráfego New Way Carvalho Avelã",
-    "slug": "durafloor-alto-trafego-new-way-carvalho-avela",
-    "category": "Laminado",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/produtos/durafloor-alto-trafego-new-way-carvalho-avela.jpeg",
-    "benefits": null,
-    "thickness": null,
-    "resistance": null,
-    "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Durafloor Alto Tráfego New Way Carvalho Avelã é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
-  },
-  {
-    "name": "Cor Calais Click Ecomex Eco Premium",
-    "slug": "cor-calais-click-ecomex-eco-premium",
-    "category": "Vinilico",
-    "tone": "Claros",
-    "imageUrl": "/images/produtos/cor-calais-click-ecomex-eco-premium.jpeg",
-    "benefits": null,
-    "thickness": null,
-    "resistance": null,
-    "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O Piso Vinílico Cor Calais Click Ecomex Eco Premium é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
-  },
-  {
-    "name": "Durafloor Link Bariloche",
-    "slug": "durafloor-link-bariloche",
-    "category": "Laminado",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/produtos/durafloor-link-bariloche.jpeg",
-    "benefits": "[\"Conforto Térmico\",\"Limpeza Fácil\",\"Alta Durabilidade\"]",
-    "thickness": "7mm",
-    "resistance": "AC4",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Durafloor Link Bariloche é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
-  },
-  {
     "name": "Durafloor Nature Jequitibá Rosa",
     "slug": "durafloor-nature-jequitiba-rosa",
     "category": "Laminado",
@@ -1253,16 +857,28 @@ async function main() {
     "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Durafloor Unique Ferrara é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
   },
   {
-    "name": "Durafloor Unique Nogueira Florida",
-    "slug": "durafloor-unique-nogueira-florida",
+    "name": "Finottato Quadratta Cinza Urbano",
+    "slug": "finottato-quadratta-cinza-urbano",
+    "category": "Vinilico",
+    "tone": "Claros",
+    "imageUrl": "/images/produtos/finottato-quadratta-cinza-urbano.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Vinílico Finottato Quadratta Cinza Urbano é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Durafloor Link Bariloche",
+    "slug": "durafloor-link-bariloche",
     "category": "Laminado",
     "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/produtos/durafloor-unique-nogueira-florida.jpeg",
+    "imageUrl": "/images/produtos/durafloor-link-bariloche.jpeg",
     "benefits": "[\"Conforto Térmico\",\"Limpeza Fácil\",\"Alta Durabilidade\"]",
     "thickness": "7mm",
     "resistance": "AC4",
     "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Durafloor Unique Nogueira Florida é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Durafloor Link Bariloche é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
   },
   {
     "name": "Durafloor Unique Toledo",
@@ -1361,6 +977,102 @@ async function main() {
     "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Quick Step Eligna Wide Carvalho Deserto Restaurado Qewn 3678 Resistente A áGua é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
   },
   {
+    "name": "Piso Laminado Gran Elegance Belmonte",
+    "slug": "gran-elegance-belmonte-4",
+    "category": "Laminado",
+    "tone": "Tons Claros",
+    "imageUrl": "/images/gran-elegance-belmonte.jpeg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Gran Elegance Belmonte oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "Eucafloor New Evidênce Veneto",
+    "slug": "eucafloor-new-evidence-veneto",
+    "category": "Laminado",
+    "tone": "Claros",
+    "imageUrl": "/images/produtos/eucafloor-new-evidence-veneto.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Eucafloor New Evidênce Veneto é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Piso Laminado Quick-Step Vision Carvalho Vitoriano",
+    "slug": "piso-laminado-quick-step-vision-carvalho-vitoriano-1",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/piso-laminado-quick-step-vision-carvalho-vitoriano.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Quick-Step Vision Carvalho Vitoriano oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "Piso Laminado Eucafloor Prime Fresno Decape New",
+    "slug": "piso-laminado-eucafloor-prime-fresno-decape-new-2",
+    "category": "Laminado",
+    "tone": "Tons Claros",
+    "imageUrl": "/images/piso-laminado-eucafloor-prime-fresno-decape-new.jpeg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Eucafloor Prime Fresno Decape New oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "piso laminado Eucafloor Prime CLICK - Carvalho Rústico",
+    "slug": "piso-laminado-eucafloor-prime-click-carvalho-r-stico-3",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/piso-laminado-eucafloor-prime-click-carvalho-rustico.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado piso laminado Eucafloor Prime CLICK - Carvalho Rústico oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "Max Elegance Claire Oak",
+    "slug": "max-elegance-claire-oak-5",
+    "category": "Laminado",
+    "tone": "Tons Claros",
+    "imageUrl": "/images/max-elegance-claire-oak.jpeg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Max Elegance Claire Oak oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "New Evidence Click Moka",
+    "slug": "new-evidence-click-moka-6",
+    "category": "Laminado",
+    "tone": "Tons Claros",
+    "imageUrl": "/images/new-evidence-click-moka.jpeg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado New Evidence Click Moka oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "Square Mármore Imperador",
+    "slug": "square-m-rmore-imperador-7",
+    "category": "Laminado",
+    "tone": "Tons Claros",
+    "imageUrl": "/images/square-marmore-imperador.jpeg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Square Mármore Imperador oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
     "name": "Quick Step Eligna Wide Qsmn 1488 Carvalho Escuro Midnight",
     "slug": "quick-step-eligna-wide-qsmn-1488-carvalho-escuro-midnight",
     "category": "Laminado",
@@ -1385,16 +1097,304 @@ async function main() {
     "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Quick Step Floorest Premiere Malta 1067 é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
   },
   {
-    "name": "Quick Step Impressive Carvalho Bege Serrado 1857",
-    "slug": "quick-step-impressive-carvalho-bege-serrado-1857",
+    "name": "Piso laminado Eucafloor Prime Click Andorra New",
+    "slug": "piso-laminado-eucafloor-prime-click-andorra-new-19",
+    "category": "Laminado",
+    "tone": "Tons Claros",
+    "imageUrl": "/images/piso-laminado-eucafloor-prime-click-andorra-new.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso laminado Eucafloor Prime Click Andorra New oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "Piso laminado Quick Step Floorest PREMIERE Malta 1067",
+    "slug": "piso-laminado-quick-step-floorest-premiere-malta-1067-20",
+    "category": "Laminado",
+    "tone": "Tons Claros",
+    "imageUrl": "/images/piso-laminado-quick-step-floorest-premiere-malta-1067.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso laminado Quick Step Floorest PREMIERE Malta 1067 oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "Piso laminado Durafloor New Way Carvalho York",
+    "slug": "piso-laminado-durafloor-new-way-carvalho-york-21",
     "category": "Laminado",
     "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/produtos/quick-step-impressive-carvalho-bege-serrado-1857.jpeg",
+    "imageUrl": "/images/piso-laminado-durafloor-new-way-carvalho-york.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso laminado Durafloor New Way Carvalho York oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "Piso Laminado Eucafloor Prime Click - Decapê",
+    "slug": "piso-laminado-eucafloor-prime-click-decap-22",
+    "category": "Laminado",
+    "tone": "Tons Claros",
+    "imageUrl": "/images/piso-laminado-eucafloor-prime-click-decape.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Eucafloor Prime Click - Decapê oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "Piso laminado Eucafloor Prime Click Carvalho Coimbra",
+    "slug": "piso-laminado-eucafloor-prime-click-carvalho-coimbra-23",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/piso-laminado-eucafloor-prime-click-carvalho-coimbra.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso laminado Eucafloor Prime Click Carvalho Coimbra oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "Piso laminado Eucafloor Prime Click Carvalho canela",
+    "slug": "piso-laminado-eucafloor-prime-click-carvalho-canela-24",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/piso-laminado-eucafloor-prime-click-carvalho-canela.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso laminado Eucafloor Prime Click Carvalho canela oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "Piso laminado Eucafloor Prime Click Italian Noce",
+    "slug": "piso-laminado-eucafloor-prime-click-italian-noce-25",
+    "category": "Laminado",
+    "tone": "Tons Escuros",
+    "imageUrl": "/images/piso-laminado-eucafloor-prime-click-italian-noce.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso laminado Eucafloor Prime Click Italian Noce oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "Piso Laminado Eucafloor prime Lâmina Amêndoa",
+    "slug": "piso-laminado-eucafloor-prime-l-mina-am-ndoa-26",
+    "category": "Laminado",
+    "tone": "Tons Claros",
+    "imageUrl": "/images/piso-laminado-eucafloor-prime-lamina-amendoa.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Eucafloor prime Lâmina Amêndoa oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "Piso laminado Eucafloor Prime Click Nogueira Malaga",
+    "slug": "piso-laminado-eucafloor-prime-click-nogueira-malaga-27",
+    "category": "Laminado",
+    "tone": "Tons Escuros",
+    "imageUrl": "/images/piso-laminado-eucafloor-prime-click-nogueira-malaga.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso laminado Eucafloor Prime Click Nogueira Malaga oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "Piso Laminado Eucafloor Prime Click Nogueira Natural",
+    "slug": "piso-laminado-eucafloor-prime-click-nogueira-natural-28",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/piso-laminado-eucafloor-prime-click-nogueira-natural.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Eucafloor Prime Click Nogueira Natural oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "Alto Tráfego Durafloor Nature Belgrado",
+    "slug": "alto-trafego-durafloor-nature-belgrado",
+    "category": "Laminado",
+    "tone": "Escuros",
+    "imageUrl": "/images/produtos/alto-trafego-durafloor-nature-belgrado.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Durafloor Nature Belgrado é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Piso Laminado Eucafloor Prime Elmo Natural",
+    "slug": "piso-laminado-eucafloor-prime-elmo-natural-29",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/piso-laminado-eucafloor-prime-elmo-natural.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Eucafloor Prime Elmo Natural oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "Piso laminado Eucafloor Prime Valência",
+    "slug": "piso-laminado-eucafloor-prime-val-ncia-30",
+    "category": "Laminado",
+    "tone": "Tons Claros",
+    "imageUrl": "/images/piso-laminado-eucafloor-prime-valencia.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso laminado Eucafloor Prime Valência oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "Piso Laminado Eucafloor Prime Click Cacau Rodapé Cor Do Piso",
+    "slug": "piso-laminado-eucafloor-prime-click-cacau-rodap-cor-do-piso-31",
+    "category": "Laminado",
+    "tone": "Tons Escuros",
+    "imageUrl": "/images/piso-laminado-eucafloor-prime-click-cacau-rodape-cor-do-piso.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Conforto Térmico\"]",
+    "thickness": "7mm",
+    "resistance": "AC3",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Piso Laminado Eucafloor Prime Click Cacau Rodapé Cor Do Piso oferece o equilíbrio ideal entre durabilidade e sofisticação. Sua tecnologia avançada garante alta resistência a riscos e facilidade de limpeza, tornando-o perfeito para ambientes residenciais e comerciais de tráfego moderado. Transforme seu espaço com o conforto e a estética acolhedora da madeira.\"}"
+  },
+  {
+    "name": "Piso vinílico tarkett Injoy Papoula",
+    "slug": "piso-vin-lico-tarkett-injoy-papoula-36",
+    "category": "Vinilico",
+    "tone": "Tons Claros",
+    "imageUrl": "/images/piso-vinilico-tarkett-injoy-papoula.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Resistente à Água\"]",
+    "thickness": "5mm",
+    "resistance": "0.30mm (Capa)",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Piso vinílico tarkett Injoy Papoula é a solução inteligente para quem busca praticidade sem abrir mão da elegância. 100% resistente à água, é ideal para todos os ambientes internos. Este padrão confere um visual contemporâneo, somado a um excelente conforto acústico e térmico.\"}"
+  },
+  {
+    "name": "Piso vinílico Finottato Imponente Chocolate Suíço",
+    "slug": "piso-vin-lico-finottato-imponente-chocolate-su-o-39",
+    "category": "Vinilico",
+    "tone": "Tons Escuros",
+    "imageUrl": "/images/piso-vinilico-finottato-imponente-chocolate-suico.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Resistente à Água\"]",
+    "thickness": "5mm",
+    "resistance": "0.30mm (Capa)",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Piso vinílico Finottato Imponente Chocolate Suíço é a solução inteligente para quem busca praticidade sem abrir mão da elegância. 100% resistente à água, é ideal para todos os ambientes internos. Este padrão confere um visual contemporâneo, somado a um excelente conforto acústico e térmico.\"}"
+  },
+  {
+    "name": "Piso vinílico Vinilforte (cinza) granada",
+    "slug": "piso-vin-lico-vinilforte-cinza-granada-40",
+    "category": "Vinilico",
+    "tone": "Tons Claros",
+    "imageUrl": "/images/piso-vinilico-vinilforte-cinza-granada.jpg",
+    "benefits": "[\"Instalação rápida\",\"Acabamento impecável\",\"Resistente à Água\"]",
+    "thickness": "5mm",
+    "resistance": "0.30mm (Capa)",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Piso vinílico Vinilforte (cinza) granada é a solução inteligente para quem busca praticidade sem abrir mão da elegância. 100% resistente à água, é ideal para todos os ambientes internos. Este padrão confere um visual contemporâneo, somado a um excelente conforto acústico e térmico.\"}"
+  },
+  {
+    "name": "Alto Tráfego Durafloor Nature Cerezo Carmel",
+    "slug": "alto-trafego-durafloor-nature-cerezo-carmel",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/alto-trafego-durafloor-nature-cerezo-carmel.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Durafloor Nature Cerezo Carmel é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Alto Tráfego Durafloor Nature Cumaru Raiz",
+    "slug": "alto-trafego-durafloor-nature-cumaru-raiz",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/alto-trafego-durafloor-nature-cumaru-raiz.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Durafloor Nature Cumaru Raiz é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Alto Tráfego Durafloor New Way Carvalho Eterno",
+    "slug": "alto-trafego-durafloor-new-way-carvalho-eterno",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/alto-trafego-durafloor-new-way-carvalho-eterno.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Durafloor New Way Carvalho Eterno é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Alto Tráfego Durafloor New Way Maceió",
+    "slug": "alto-trafego-durafloor-new-way-maceio",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/alto-trafego-durafloor-new-way-maceio.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Durafloor New Way Maceió é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Alto Tráfego Durafloor New Way Petrópolis",
+    "slug": "alto-trafego-durafloor-new-way-petropolis",
+    "category": "Laminado",
+    "tone": "Escuros",
+    "imageUrl": "/images/produtos/alto-trafego-durafloor-new-way-petropolis.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Durafloor New Way Petrópolis é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Alto Tráfego Durafloor New Way ÁLamo",
+    "slug": "alto-trafego-durafloor-new-way-alamo",
+    "category": "Laminado",
+    "tone": "Claros",
+    "imageUrl": "/images/produtos/alto-trafego-durafloor-new-way-alamo.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Durafloor New Way ÁLamo é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Alto Tráfego Durafloor Studio Carvalho Hanover",
+    "slug": "alto-trafego-durafloor-studio-carvalho-hanover",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/alto-trafego-durafloor-studio-carvalho-hanover.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Alto Tráfego Durafloor Studio Carvalho Hanover é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Carvalho Natural Soft",
+    "slug": "carvalho-natural-soft",
+    "category": "Piso Laminado Quick Step Linha Impressive Cor 1855",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/carvalho-natural-soft.jpeg",
     "benefits": "[\"Conforto Térmico\",\"Limpeza Fácil\",\"Alta Durabilidade\"]",
     "thickness": "7mm",
     "resistance": "AC4",
     "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Quick Step Impressive Carvalho Bege Serrado 1857 é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Carvalho Natural Soft é a escolha perfeita para quem busca sofisticação aliada à praticidade. Com excelente conforto termoacústico, mantém os ambientes aconchegantes em qualquer estação. Sua superfície de alta tecnologia garante modernidade ao design e extrema facilidade de limpeza, sendo ideal para o dia a dia de famílias que não abrem mão do estilo e durabilidade.\"}"
   },
   {
     "name": "Quick Step Impressive Carvalho Cinza Suave",
@@ -1419,18 +1419,6 @@ async function main() {
     "resistance": "AC4",
     "warranty": "10 anos",
     "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Quick Step Impressive Carvalho Clássico Natural Im 1848 Resistente A áGua é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
-  },
-  {
-    "name": "Carvalho Natural Soft",
-    "slug": "carvalho-natural-soft",
-    "category": "Piso Laminado Quick Step Linha Impressive Cor 1855",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/produtos/carvalho-natural-soft.jpeg",
-    "benefits": "[\"Conforto Térmico\",\"Limpeza Fácil\",\"Alta Durabilidade\"]",
-    "thickness": "7mm",
-    "resistance": "AC4",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Carvalho Natural Soft é a escolha perfeita para quem busca sofisticação aliada à praticidade. Com excelente conforto termoacústico, mantém os ambientes aconchegantes em qualquer estação. Sua superfície de alta tecnologia garante modernidade ao design e extrema facilidade de limpeza, sendo ideal para o dia a dia de famílias que não abrem mão do estilo e durabilidade.\"}"
   },
   {
     "name": "Quick Step Miracosa Jersey",
@@ -1505,16 +1493,40 @@ async function main() {
     "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Quick Step Smart 314 Novo Carvalho Everest é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
   },
   {
-    "name": "Quick Step Smart Carvalho Natural Havana Com Marcas De Serra",
-    "slug": "quick-step-smart-carvalho-natural-havana-com-marcas-de-serra",
-    "category": "Laminado",
+    "name": "Step Classic Carvalho Congelado Bege",
+    "slug": "step-classic-carvalho-congelado-bege",
+    "category": "Piso Laminado Quick",
     "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/produtos/quick-step-smart-carvalho-natural-havana-com-marcas-de-serra.jpeg",
+    "imageUrl": "/images/produtos/step-classic-carvalho-congelado-bege.jpeg",
     "benefits": "[\"Conforto Térmico\",\"Limpeza Fácil\",\"Alta Durabilidade\"]",
     "thickness": "7mm",
     "resistance": "AC4",
     "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Quick Step Smart Carvalho Natural Havana Com Marcas De Serra é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Step Classic Carvalho Congelado Bege é a escolha perfeita para quem busca sofisticação aliada à praticidade. Com excelente conforto termoacústico, mantém os ambientes aconchegantes em qualquer estação. Sua superfície de alta tecnologia garante modernidade ao design e extrema facilidade de limpeza, sendo ideal para o dia a dia de famílias que não abrem mão do estilo e durabilidade.\"}"
+  },
+  {
+    "name": "Step Vision Carvalho Sereno",
+    "slug": "step-vision-carvalho-sereno",
+    "category": "Piso Laminado Quick",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/step-vision-carvalho-sereno.jpeg",
+    "benefits": "[\"Conforto Térmico\",\"Limpeza Fácil\",\"Alta Durabilidade\"]",
+    "thickness": "7mm",
+    "resistance": "AC4",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Step Vision Carvalho Sereno é a escolha perfeita para quem busca sofisticação aliada à praticidade. Com excelente conforto termoacústico, mantém os ambientes aconchegantes em qualquer estação. Sua superfície de alta tecnologia garante modernidade ao design e extrema facilidade de limpeza, sendo ideal para o dia a dia de famílias que não abrem mão do estilo e durabilidade.\"}"
+  },
+  {
+    "name": "Step Vision Carvalho Studio",
+    "slug": "step-vision-carvalho-studio",
+    "category": "Piso Laminado Quick",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/step-vision-carvalho-studio.jpeg",
+    "benefits": "[\"Conforto Térmico\",\"Limpeza Fácil\",\"Alta Durabilidade\"]",
+    "thickness": "7mm",
+    "resistance": "AC4",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Step Vision Carvalho Studio é a escolha perfeita para quem busca sofisticação aliada à praticidade. Com excelente conforto termoacústico, mantém os ambientes aconchegantes em qualquer estação. Sua superfície de alta tecnologia garante modernidade ao design e extrema facilidade de limpeza, sendo ideal para o dia a dia de famílias que não abrem mão do estilo e durabilidade.\"}"
   },
   {
     "name": "Quick Step Smart Pátina Cotagge",
@@ -1589,42 +1601,6 @@ async function main() {
     "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Quick Step Vision Imbirema é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
   },
   {
-    "name": "Step Classic Carvalho Congelado Bege",
-    "slug": "step-classic-carvalho-congelado-bege",
-    "category": "Piso Laminado Quick",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/produtos/step-classic-carvalho-congelado-bege.jpeg",
-    "benefits": "[\"Conforto Térmico\",\"Limpeza Fácil\",\"Alta Durabilidade\"]",
-    "thickness": "7mm",
-    "resistance": "AC4",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Step Classic Carvalho Congelado Bege é a escolha perfeita para quem busca sofisticação aliada à praticidade. Com excelente conforto termoacústico, mantém os ambientes aconchegantes em qualquer estação. Sua superfície de alta tecnologia garante modernidade ao design e extrema facilidade de limpeza, sendo ideal para o dia a dia de famílias que não abrem mão do estilo e durabilidade.\"}"
-  },
-  {
-    "name": "Step Vision Carvalho Sereno",
-    "slug": "step-vision-carvalho-sereno",
-    "category": "Piso Laminado Quick",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/produtos/step-vision-carvalho-sereno.jpeg",
-    "benefits": "[\"Conforto Térmico\",\"Limpeza Fácil\",\"Alta Durabilidade\"]",
-    "thickness": "7mm",
-    "resistance": "AC4",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Step Vision Carvalho Sereno é a escolha perfeita para quem busca sofisticação aliada à praticidade. Com excelente conforto termoacústico, mantém os ambientes aconchegantes em qualquer estação. Sua superfície de alta tecnologia garante modernidade ao design e extrema facilidade de limpeza, sendo ideal para o dia a dia de famílias que não abrem mão do estilo e durabilidade.\"}"
-  },
-  {
-    "name": "Step Vision Carvalho Studio",
-    "slug": "step-vision-carvalho-studio",
-    "category": "Piso Laminado Quick",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/produtos/step-vision-carvalho-studio.jpeg",
-    "benefits": "[\"Conforto Térmico\",\"Limpeza Fácil\",\"Alta Durabilidade\"]",
-    "thickness": "7mm",
-    "resistance": "AC4",
-    "warranty": "10 anos",
-    "techSpecsMisc": "{\"Descrição\":\"O piso laminado Step Vision Carvalho Studio é a escolha perfeita para quem busca sofisticação aliada à praticidade. Com excelente conforto termoacústico, mantém os ambientes aconchegantes em qualquer estação. Sua superfície de alta tecnologia garante modernidade ao design e extrema facilidade de limpeza, sendo ideal para o dia a dia de famílias que não abrem mão do estilo e durabilidade.\"}"
-  },
-  {
     "name": "Step Vision Carvalho Vitoriano",
     "slug": "step-vision-carvalho-vitoriano",
     "category": "Piso Laminado Quick",
@@ -1697,6 +1673,18 @@ async function main() {
     "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Quick Step Vision Carvalho Cubano 877 é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
   },
   {
+    "name": "Quick Step Impressive Carvalho Bege Serrado 1857",
+    "slug": "quick-step-impressive-carvalho-bege-serrado-1857",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/quick-step-impressive-carvalho-bege-serrado-1857.jpeg",
+    "benefits": "[\"Conforto Térmico\",\"Limpeza Fácil\",\"Alta Durabilidade\"]",
+    "thickness": "7mm",
+    "resistance": "AC4",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Quick Step Impressive Carvalho Bege Serrado 1857 é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
     "name": "Quick Step Linha Impressive Cor 1855 - Carvalho Natural Soft",
     "slug": "quick-step-linha-impressive-cor-1855-carvalho-natural-soft",
     "category": "Laminado",
@@ -1707,6 +1695,18 @@ async function main() {
     "resistance": null,
     "warranty": null,
     "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Quick Step Linha Impressive Cor 1855 - Carvalho Natural Soft é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
+  },
+  {
+    "name": "Quick Step Smart Carvalho Natural Havana Com Marcas De Serra",
+    "slug": "quick-step-smart-carvalho-natural-havana-com-marcas-de-serra",
+    "category": "Laminado",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/quick-step-smart-carvalho-natural-havana-com-marcas-de-serra.jpeg",
+    "benefits": "[\"Conforto Térmico\",\"Limpeza Fácil\",\"Alta Durabilidade\"]",
+    "thickness": "7mm",
+    "resistance": "AC4",
+    "warranty": "10 anos",
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Quick Step Smart Carvalho Natural Havana Com Marcas De Serra é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
   },
   {
     "name": "Quick-step Classic Carvalho Congelado Bege",
@@ -1817,52 +1817,28 @@ async function main() {
     "techSpecsMisc": "{\"Descrição\":\"Versatilidade e charme natural em um só produto: o Quick-Step Impressive Carvalho Suave Médio 1856. Com tom equilibrado que combina com qualquer estilo de decoração, este laminado garante conforto termoacústico de primeira linha, superfície resistente ao uso diário e limpeza prática. Ideal para criar ambientes acolhedores e contemporâneos.\"}"
   },
   {
-    "name": "Ecomex Eco Hard Madrid",
-    "slug": "ecomex-eco-hard-madrid",
-    "category": "Vinílico",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/produtos/ecomex-eco-hard-madrid.jpeg",
-    "benefits": null,
-    "thickness": null,
-    "resistance": null,
-    "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Hard Madrid traz a sofisticação das madeiras quentes para o seu ambiente, com 100% de resistência à água. Sua tecnologia Hard Floor une rigidez e conforto acústico, amortecendo os sons do tráfego diário. De limpeza facilíssima, é a escolha inteligente para quem quer modernidade e praticidade sem abrir mão do estilo.\"}"
-  },
-  {
-    "name": "Ecomex Eco Hard Vigo",
-    "slug": "ecomex-eco-hard-vigo",
-    "category": "Vinílico",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/produtos/ecomex-eco-hard-vigo.jpeg",
-    "benefits": null,
-    "thickness": null,
-    "resistance": null,
-    "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"Inspire-se na elegância europeia com o Ecomex Eco Hard Vigo. Este piso vinílico combina o visual amadeirado quente com durabilidade excepcional e resistência total à água, ideal para cozinhas, banheiros e áreas de alto tráfego. Seu conforto acústico e térmico elevado transforma qualquer ambiente em um espaço premium e aconchegante.\"}"
-  },
-  {
     "name": "Ecomex Eco Home Bize",
     "slug": "ecomex-eco-home-bize",
     "category": "Vinílico",
-    "tone": "Claros",
+    "tone": "Amadeirados Quentes",
     "imageUrl": "/images/produtos/ecomex-eco-home-bize.jpeg",
     "benefits": null,
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"Luminosidade e leveza para o seu lar com o Ecomex Eco Home Bize. Seus tons claros ampliam visualmente os ambientes e trazem frescor ao design de interiores. Completamente resistente à água e com excelente isolamento termoacústico, este piso vinílico é a opção perfeita para quem busca modernidade, higiene e facilidade de manutenção.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Home Bize proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   },
   {
     "name": "Ecomex Eco Home Lille",
     "slug": "ecomex-eco-home-lille",
     "category": "Vinílico",
-    "tone": "Claros",
+    "tone": "Amadeirados Quentes",
     "imageUrl": "/images/produtos/ecomex-eco-home-lille.jpeg",
     "benefits": null,
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O Ecomex Eco Home Lille é a escolha certa para ambientes que pedem delicadeza e modernidade. Com paleta clara inspirada na sofisticação francesa, este piso vinílico oferece conforto térmico notável, baixo ruído e superfície 100% impermeável. Limpe em segundos e desfrute de um espaço sempre impecável.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Home Lille proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   },
   {
     "name": "Ecomex Eco Home Lyon",
@@ -1874,31 +1850,19 @@ async function main() {
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"Inspirado na beleza de Lyon, este piso vinílico Ecomex Eco Home entrega uma estética amadeirada calorosa e contemporânea. Sua composição oferece isolamento acústico superior e conforto térmico para todos os ambientes. Impermeável e de fácil limpeza, é perfeito para salas, quartos e corredores que precisam de durabilidade sem sacrificar o estilo.\"}"
-  },
-  {
-    "name": "Ecomex Eco Home Nantes",
-    "slug": "ecomex-eco-home-nantes",
-    "category": "Vinílico",
-    "tone": "Amadeirados Quentes",
-    "imageUrl": "/images/produtos/ecomex-eco-home-nantes.jpeg",
-    "benefits": null,
-    "thickness": null,
-    "resistance": null,
-    "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O Ecomex Eco Home Nantes une o charme das madeiras quentes com a praticidade do vinil moderno. Resistente à água, a arranhões e ao tráfego intenso, este piso garante um excelente conforto termoacústico, tornando os ambientes mais silenciosos e agradáveis. Uma solução premium que é tão fácil de instalar quanto de limpar.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Home Lyon proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   },
   {
     "name": "Ecomex Eco Home Versalhes",
     "slug": "ecomex-eco-home-versalhes",
     "category": "Vinílico",
-    "tone": "Amadeirados Quentes",
+    "tone": "Escuros",
     "imageUrl": "/images/produtos/ecomex-eco-home-versalhes.jpeg",
     "benefits": null,
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"Leve a grandiosidade de Versalhes para o seu ambiente com este piso vinílico Ecomex Eco Home. O sofisticado padrão amadeirado é combinado com tecnologia de ponta que garante resistência à água, conforto acústico e térmico e facilidade na limpeza. Um piso que transforma qualquer espaço em um ambiente nobre e acolhedor.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Home Versalhes proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   },
   {
     "name": "Ecomex Eco Home Vienne",
@@ -1910,31 +1874,19 @@ async function main() {
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"Elegância e praticidade em equilíbrio perfeito: o Ecomex Eco Home Vienne apresenta veios amadeirados quentes que trazem aconchego ao seu lar. 100% impermeável e com ótimo isolamento termoacústico, este piso vinílico é ideal para todos os cômodos, mantendo o ambiente silencioso, confortável e sempre fácil de higienizar.\"}"
-  },
-  {
-    "name": "Ecomex Eco Premium Paris",
-    "slug": "ecomex-eco-premium-paris",
-    "category": "Vinílico",
-    "tone": "Claros",
-    "imageUrl": "/images/produtos/ecomex-eco-premium-paris.jpeg",
-    "benefits": null,
-    "thickness": null,
-    "resistance": null,
-    "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O charme parisiense ao seu alcance com o Ecomex Eco Premium Paris. Seus tons claros e refinados trazem luminosidade e sofisticação a qualquer projeto. Como todo piso vinílico Premium da Ecomex, é 100% resistente à água, oferece excelente conforto termoacústico e limpeza facilitada — uma escolha de alto padrão para ambientes contemporâneos.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Home Vienne proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   },
   {
     "name": "Ecomex Eco Premium Cannes",
     "slug": "ecomex-eco-premium-cannes",
     "category": "Vinílico",
-    "tone": "Claros",
+    "tone": "Amadeirados Quentes",
     "imageUrl": "/images/produtos/ecomex-eco-premium-cannes.jpeg",
     "benefits": null,
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"Sofisticação premium com o Ecomex Eco Premium Cannes. Com padrão claro e elegante, este piso vinílico amplia visualmente os ambientes e entrega conforto acústico e térmico de alto nível. Impermeável, durável e de manutenção simplíssima — o piso ideal para projetos que exigem o melhor em qualidade e estética.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Premium Cannes proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   },
   {
     "name": "Ecomex Eco Premium Lyon",
@@ -1946,7 +1898,7 @@ async function main() {
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O Ecomex Eco Premium Lyon eleva o padrão do seu espaço com veios amadeirados quentes de textura realista. Nível premium de resistência à água, isolamento termoacústico superior e facilidade de limpeza fazem deste vinílico a solução perfeita para quem exige durabilidade e beleza em qualquer ambiente.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Premium Lyon proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   },
   {
     "name": "Ecomex Eco Premium Marselha",
@@ -1958,7 +1910,7 @@ async function main() {
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"Com o Ecomex Eco Premium Marselha, traga a essência mediterrânea para o seu lar. O padrão amadeirado quente é executado com qualidade premium, garantindo aparência sofisticada e resistência excepcional à água e ao tráfego intenso. O isolamento termoacústico diferenciado e a limpeza fácil completam uma escolha de excelência.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Premium Marselha proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   },
   {
     "name": "Ecomex Eco Premium Metz",
@@ -1970,7 +1922,19 @@ async function main() {
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"O Ecomex Eco Premium Metz é para quem quer o melhor. Com tonalidade amadeirada sofisticada e acabamento de nível premium, este piso vinílico oferece resistência total à água, excelente isolamento termoacústico e superfície que dispensa esforço na limpeza. Ideal para residências e projetos comerciais que primam pela qualidade.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Premium Metz proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
+  },
+  {
+    "name": "Ecomex Eco Premium Paris",
+    "slug": "ecomex-eco-premium-paris",
+    "category": "Vinílico",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/ecomex-eco-premium-paris.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Premium Paris proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   },
   {
     "name": "Ecomex Eco Premium Toulon",
@@ -1982,31 +1946,74 @@ async function main() {
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"Qualidade premium inspirada no sul da França: o Ecomex Eco Premium Toulon combina beleza amadeirada com a mais alta tecnologia em pisos vinílicos. Resistente à umidade em 100%, com conforto acústico e térmico superiores e facilidade ímpar de limpeza, é a solução definitiva para ambientes que demandam estilo e performance.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Premium Toulon proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   },
   {
     "name": "Ecomex Eco Premium Troyes",
     "slug": "ecomex-eco-premium-troyes",
     "category": "Vinílico",
-    "tone": "Claros",
+    "tone": "Amadeirados Quentes",
     "imageUrl": "/images/produtos/ecomex-eco-premium-troyes.jpeg",
     "benefits": null,
     "thickness": null,
     "resistance": null,
     "warranty": null,
-    "techSpecsMisc": "{\"Descrição\":\"Retire o melhor da luz natural com o Ecomex Eco Premium Troyes. Seus tons claros e refinados criam ambientes amplos, frescos e modernos. Com a tecnologia Premium da Ecomex, você tem resistência à água, conforto termoacústico acima da média e uma superfície que se limpa em instantes — o piso premium que o seu projeto merecia.\"}"
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Premium Troyes proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
+  },
+  {
+    "name": "Ecomex Eco Hard Madrid",
+    "slug": "ecomex-eco-hard-madrid",
+    "category": "Vinílico",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/ecomex-eco-hard-madrid.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Hard Madrid proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
+  },
+  {
+    "name": "Ecomex Eco Hard Vigo",
+    "slug": "ecomex-eco-hard-vigo",
+    "category": "Vinílico",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/ecomex-eco-hard-vigo.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Hard Vigo proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
+  },
+  {
+    "name": "Ecomex Eco Home Nantes",
+    "slug": "ecomex-eco-home-nantes",
+    "category": "Vinílico",
+    "tone": "Amadeirados Quentes",
+    "imageUrl": "/images/produtos/ecomex-eco-home-nantes.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O piso vinílico Ecomex Eco Home Nantes proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.\"}"
   }
-]
+];
 
-  for (const product of productsData) {
+  console.log('🌱 Semeando banco de dados com ' + productsData.length + ' produtos...')
+
+  // Limpeza de produtos duplicados gerados previamente (se necessário)
+  await prisma.product.deleteMany({
+    where: { slug: 'piso-laminado-eucafloor-new-evidence-veneto' }
+  });
+
+  for (const data of productsData) {
     await prisma.product.upsert({
-      where: { slug: product.slug },
-      create: product,
-      update: product,
+      where: { slug: data.slug },
+      update: data,
+      create: data,
     })
   }
 
-  console.log(`✅ Seed complete: ${productsData.length} products upserted.`)
+  console.log('✅ Semeadura concluída com sucesso.')
 }
 
 main()
