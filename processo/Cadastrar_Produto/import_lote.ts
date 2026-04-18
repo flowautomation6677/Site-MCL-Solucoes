@@ -30,7 +30,7 @@ function classifyTone(name: string): string {
     const claros = ['nórdica', 'vanilla', 'prata', 'algodão', 'areia', 'ouro branco', 'cinza', 'nevoeiro', 'luz', 'veneto', 'cimento', 'nice', 'claro', 'bolonha', 'chamonix', 'calais', 'nagoya', 'álamo'];
     
     // Palavras-chave para tons escuros
-    const escuros = ['moka', 'preto', 'antigo', 'chocolate', 'cosmos', 'terra', 'escuro', 'belgrado', 'petrópolis'];
+    const escuros = ['moka', 'preto', 'antigo', 'chocolate', 'cosmos', 'terra', 'escuro', 'belgrado', 'petrópolis', 'versalhes'];
     
     for (const kw of claros) {
         if (lowerName.includes(kw)) return "Claros";
@@ -46,6 +46,7 @@ function classifyTone(name: string): string {
 async function updateSeed() {
     const allProducts = await prisma.product.findMany();
     
+    // Removemos os campos não necessários ou que serão gerados de novo
     const cleanProducts = allProducts.map(({ id, createdAt, updatedAt, ...rest }: any) => rest);
 
     const seedContent = `
@@ -58,7 +59,7 @@ async function main() {
 
   console.log('🌱 Semeando banco de dados com ' + productsData.length + ' produtos...')
 
-  // Clean explicit duplicate on production
+  // Limpeza de produtos duplicados gerados previamente (se necessário)
   await prisma.product.deleteMany({
     where: { slug: 'piso-laminado-eucafloor-new-evidence-veneto' }
   });
@@ -85,7 +86,7 @@ main()
 `;
 
     fs.writeFileSync('prisma/seed.ts', seedContent.trim());
-    console.log('✅ prisma/seed.ts gerado com todos os ' + cleanProducts.length + ' produtos.');
+    console.log('✅ prisma/seed.ts gerado com todos os ' + cleanProducts.length + ' produtos auto-contidos.');
 }
 
 async function main() {
@@ -107,46 +108,78 @@ async function main() {
   for (const file of files) {
     if (!/\.(jpe?g|png|gif|webp)$/i.test(file)) continue;
     
-    let category = "Laminado";
     const nameRaw = path.parse(file).name;
+    const parts = nameRaw.split('-').map(s => s.trim());
     
-    if (nameRaw.toLowerCase().includes("vinílico") || nameRaw.toLowerCase().includes("vinilico")) {
+    let parsedCategory = "Laminado";
+    let parsedTone = "";
+    let parsedName = nameRaw;
+
+    if (parts.length >= 3) {
+        parsedCategory = parts[0];
+        parsedTone = parts[1];
+        parsedName = parts.slice(2).join(' '); // Junta o resto caso tenha mais hífens
+    } else if (parts.length === 2) {
+        parsedCategory = parts[0];
+        parsedName = parts[1];
+    } else {
+        parsedCategory = parts[0];
+        parsedName = parts[0];
+    }
+
+    let category = "Laminado";
+    if (parsedCategory.toLowerCase().includes("vinílico") || parsedCategory.toLowerCase().includes("vinilico")) {
         category = "Vinilico";
     }
 
-    let cleanName = nameRaw
-        .replace(/Piso(?:s)?\s+/i, '')
-        .replace(/(?:Laminado|vin[ií]lico(?: colado)?)(?:\s+|-)?/i, '')
-        .trim();
-    
+    // Tratamento para montar o nome final do produto
+    let fullProductName = parsedName;
+    if (parts.length === 2) {
+        let extraLineInfo = parsedCategory.replace(/Piso(?:s)?\s+/i, '').replace(/(?:Laminado|vin[ií]lico(?: colado)?)(?:\s+|-)?/i, '').trim();
+        if (extraLineInfo.length > 0) {
+            fullProductName = `${extraLineInfo} ${parsedName}`;
+        }
+    }
+
+    // Remove eventuais hífens residuais e aplica o Capitalize a cada palavra
+    let cleanName = fullProductName.replace(/-/g, ' ').replace(/\s+/g, ' ').trim();
     cleanName = cleanName.replaceAll(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.slice(1).toLowerCase());
 
+    // Gera o slug limpo (URL-friendly)
     let slug = slugify(cleanName);
     if (!slug) slug = `produto-${Date.now()}`;
     
-    const ext = path.extname(file);
+    const ext = path.extname(file).toLowerCase();
     const newFileName = `${slug}${ext}`;
 
     const sourcePath = path.join(sourceDir, file);
     const destPath = path.join(destDir, newFileName);
+    
+    // Copia e salva a imagem do produto usando o slug configurado
     fs.copyFileSync(sourcePath, destPath);
 
     const imageUrl = `/images/produtos/${newFileName}`;
-    const tone = classifyTone(cleanName);
+    
+    let finalTone = classifyTone(cleanName);
+    if (parsedTone && (parsedTone.toLowerCase().includes('claro') || parsedTone.toLowerCase().includes('escuro') || parsedTone.toLowerCase().includes('quente'))) {
+        if (parsedTone.toLowerCase().includes('claro')) finalTone = "Claros";
+        else if (parsedTone.toLowerCase().includes('escuro')) finalTone = "Escuros";
+        else finalTone = "Amadeirados Quentes";
+    }
 
-    const catLabel = category === 'Vinilico' ? 'Vinílico' : 'Laminado';
+    // Formata o copy do JSON de Description
     const techSpecsMisc = JSON.stringify({
-        "Descrição": `O Piso ${catLabel} ${cleanName} é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.`
+        "Descrição": `O piso ${category.toLowerCase()} ${cleanName} proporciona uma experiência de ambiente elevada. Com excelente conforto termoacústico, ele absorve impactos e transforma qualquer cômodo em um espaço mais silencioso e aconchegante. Seu design elegante traz modernidade aos projetos, e sua superfície facilita a limpeza rápida do dia a dia, simplificando a rotina com máxima praticidade.`
     });
 
-    console.log(`Inserindo: ${cleanName} | Cat: ${category} | Tom: ${tone}`);
+    console.log(`🔨 Inserindo: ${cleanName} | Categoria: ${category} | Tom: ${finalTone} | Slug: ${slug}`);
     
     await prisma.product.upsert({
         where: { slug },
         update: {
             name: cleanName,
             category,
-            tone,
+            tone: finalTone,
             imageUrl,
             techSpecsMisc
         },
@@ -154,16 +187,16 @@ async function main() {
             name: cleanName,
             slug,
             category,
-            tone,
+            tone: finalTone,
             imageUrl,
             techSpecsMisc
         }
     });
   }
 
-  console.log("✅ Importação no Banco de Dados concluída.");
+  console.log("✅ Importação no Banco de Dados concluída com sucesso.");
   
-  console.log("🔄 Gerando nova Semente (Seed) para o Coolify...");
+  console.log("🔄 Gerando nova Semente (Seed) do Prisma para o Coolify...");
   await updateSeed();
 }
 
@@ -171,7 +204,7 @@ void (async () => {
   try {
       await main();
   } catch (e) {
-      console.error("Erro:", e);
+      console.error("Erro na importação final:", e);
       await prisma.$disconnect();
       process.exit(1);
   } finally {

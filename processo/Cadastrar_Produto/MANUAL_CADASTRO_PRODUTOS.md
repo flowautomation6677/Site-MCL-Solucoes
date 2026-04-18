@@ -41,15 +41,15 @@ Quando os arquivos estiverem todos na pasta devidamente nomeados, copie o prompt
 > 
 > Quero que você aja como um Desenvolvedor Fullstack e Especialista em Dados do nosso projeto (Next.js + Prisma) e implemente o processo em lote de maneira rigorosa a seguir:
 > 
-> **1. Parseamento Semântico:** Leia a pasta especificada. Você vai perceber que os nomes dos arquivos estão divididos por traço: `Categoria - Tonalidade - NomeDoProduto.extensão`. Separe essas 3 informações com precisão.
+> **1. Parseamento Semântico:** Leia a pasta especificada. Você vai perceber que os nomes dos arquivos estão divididos por traço: `Categoria - Tonalidade - NomeDoProduto.extensão`. Separe essas 3 informações com precisão. **CRÍTICO:** As strings de "Categoria" que irão para o banco DEVEM ser gravadas sem acento para bater com o front-end (ex: use rigorosamente `"Vinilico"` ao invés de `"Vinílico"`).
 > **2. Sanitização de Nomes:** Remova os hifens de separação do Título do Produto, coloque a primeira letra de cada palavra em maiúsculo (Capitalize) e gere o `slug` no formato URL-friendly para o banco.
 > **3. Gestão de Assets:** Copie os arquivos de imagem desta pasta raiz e jogue-os dentro de `public/images/produtos/`, salvando os arquivos destino unicamente usando o `slug` gerado e a extensão.
 > **4. Geração Dinâmica de Descrição:** O nosso schema.prisma permite um campo JSON `techSpecsMisc`. Gere um JSON no formato `{"Descrição": "..."}`. A descrição deve ser um copy de vendas convidativo focado no conforto termoacústico, modernidade e facilidade de limpeza adequados para pisos da categoria extraída.
-> **5. Execução Escalável:** Crie (ou sobrescreva se já existir) o arquivo script robusto `import_products.ts` manipulando o Prisma via `upsert` (baseado no slug) para garantir que possamos re-rodar sem duplicações.
+> **5. Reuso de Código (Execução Escalável):** Atualize e utilize EXCLUSIVAMENTE o script já existente em `processo/Cadastrar_Produto/import_lote.ts`. NÃO CRIE scripts novos soltos pela raiz do projeto. Adapte sua lógica manipulando o Prisma via `upsert` (baseado no slug) para re-rodar sem duplicações caso necessário.
 > **6. Atualização de Semente (Sync Produção):** Após a importação, gere automaticamente (ou atualize) o arquivo `prisma/seed.ts` de forma **auto-contida** (com os dados hardcoded no arquivo) para que possamos sincronizar com o Coolify.
-> **7. Roteiro Fim a Fim:** Rode o script utilizando `npx tsx import_products.ts` de forma autônoma (via ferramenta de shell).
+> **7. Roteiro Fim a Fim:** Rode o script utilizando `npx tsx processo/Cadastrar_Produto/import_lote.ts` de forma autônoma (via ferramenta de shell).
 > 
-> Assim que a inclusão for finalizada e o banco de dados populado, por favor me avise para que eu faça a validação final. use o código da pasta processo/Cadastrar_Produto/import_lote.ts para fazer a importação."
+> Assim que a inclusão for finalizada e o banco de dados populado, por favor me avise para que eu faça a validação final."
 > 
 > **Fim do Prompt**
 ---
@@ -64,6 +64,7 @@ Uma vez que a IA responda *"Os produtos foram inseridos..."*, faça o checklist:
 4. **Acione o Filtro de Tonalidade** para garantir que os que você escreveu `Claros` caíram no filtro correto.
 5. Clique em **"Ver Padrão"** (Modal) e avalie se a descrição automática de vendas que a IA gerou faz sentido para a qualidade requerida.
 6. A pasta temporária (ex: `novos_produtos`) já pode ser deletada do seu computador logo em seguida para organizar o ambiente.
+7. **🛠️ Troubleshooting (Se não aparecer no Front-end):** O erro operacional mais comum é a IA submeter a gravação com grafia ligeiramente diferente do Frontend (ex: injetou no Prisma com acento: `"Vinílico"` em vez de `"Vinilico"` ou `"tons claros"` em vez de só `"Claros"`). Se a tela estiver branca ou faltar itens, aponte imediatamente para a inteligência: *"Cruze as nomenclaturas gravadas da categoria e tonalidade com o filtro exigido nas rotas `/app/vinilicos/page.tsx`, corrija e rode o upsert novamente"*.
 
 ---
 
