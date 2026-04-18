@@ -125,6 +125,18 @@ async function main() {
     "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Eucafloor New Evidênce Moka é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade, combinando perfeitamente com projetos contemporâneos e clássicos.\"}"
   },
   {
+    "name": "Eucafloor New Evidênce Veneto",
+    "slug": "piso-laminado-eucafloor-new-evidence-veneto",
+    "category": "Laminado",
+    "tone": "Claros",
+    "imageUrl": "/images/produtos/piso-laminado-eucafloor-new-evidence-veneto.jpeg",
+    "benefits": null,
+    "thickness": null,
+    "resistance": null,
+    "warranty": null,
+    "techSpecsMisc": "{\"Descrição\":\"O Piso Laminado Eucafloor New Evidênce Veneto é a escolha perfeita para ambientes que buscam elegância, conforto termoacústico e alta durabilidade.\"}"
+  },
+  {
     "name": "Eucafloor Prime Click Carvalho New",
     "slug": "eucafloor-prime-click-carvalho-new",
     "category": "Laminado",
